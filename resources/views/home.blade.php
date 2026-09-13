@@ -5,77 +5,7 @@
 
 <title>Foro de SEO, WebMasters en Español</title>
 
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "Organization",
-      "image": [        
-        "https://foroworkers.com/public/images/foroworkers.png"
-       ],
-      "name": "Foroworkers",
-      "address": {
-        "@type": "PostalAddress",
-        "streetAddress": "Caracas",
-        "addressLocality": "Distrito Federal",
-        "addressRegion": "VE",
-        "postalCode": "1010",
-        "addressCountry": "VE"
-      },
-      "review": {
-        "@type": "Review",
-        "reviewRating": {
-          "@type": "Rating",
-          "ratingValue": 5,
-          "bestRating": 5
-        },
-        "author": {
-          "@type": "Person",
-          "name": "Jonathan Castro"
-        }
-      },
-      "geo": {
-        "@type": "GeoCoordinates",
-        "latitude": 10.48801,
-        "longitude": -66.87919
-      },
-      "url": "https://foroworkers.com/",
-      "telephone": "+5804241666224",     
-      "priceRange": "$$$",
-      "openingHoursSpecification": [
-        {
-          "@type": "OpeningHoursSpecification",
-          "dayOfWeek": [
-            "Monday",
-            "Tuesday"
-          ],
-          "opens": "11:30",
-          "closes": "22:00"
-        },
-        {
-          "@type": "OpeningHoursSpecification",
-          "dayOfWeek": [
-            "Wednesday",
-            "Thursday",
-            "Friday"
-          ],
-          "opens": "11:30",
-          "closes": "23:00"
-        },
-        {
-          "@type": "OpeningHoursSpecification",
-          "dayOfWeek": "Saturday",
-          "opens": "16:00",
-          "closes": "23:00"
-        },
-        {
-          "@type": "OpeningHoursSpecification",
-          "dayOfWeek": "Sunday",
-          "opens": "16:00",
-          "closes": "22:00"
-        }
-      ]      
-    }
-    </script> 
+   
 
 <link rel="canonical" href="https://foroworkers.com/" />
 
