@@ -26,16 +26,10 @@ sudo apt-get install php8.3 php8.3-pgsql php8.3-mysql php8.3-intl php8.3-json ph
 
 The following steps are meant to be used on a development server.
 
-- Option 1: Install with Composer
+-  Clone Project
 
 ```bash
-$ composer create-project sistemaspymesjc/hudemyx
-``` 
-
-- Option 2: Clone Project
-
-```bash
-$ git clone https://github.com/sistemaspymesjc/hudemyx.git
+$ git clone https://github.com/joncastdev/forum-laravel.git
 ``` 
 
 - Pull Project Dev Branch
@@ -46,7 +40,7 @@ $ git pull dev
 - Navigate to the root of the Laravel project
 
 ```bash
-$ cd hudemyx
+$ cd forum-laravel
 ``` 
 - Setup vendor libraries 
 
@@ -59,6 +53,13 @@ $ composer install
 ```bash
 $ cp .env.example .env
 ``` 
+```bash
+$ php artisan migrate:fresh --seed
+```
+```bash
+$ php artisan storage:link
+```
+
 ```bash
 $ php artisan key:generate
 ``` 
@@ -82,12 +83,11 @@ _Pass: Test1234
 
 * [Laravel 13](https://laravel.com/docs/13.x)
 * [Email Tool](https://mailtrap.io?ref=jonathan61)  
-* [Hosting Tool](https://namecheap.pxf.io/rnOVB5) 
 
 
 ## Author ✒️
 
-* **Jonathan Castro** - *Software Engineer* - [jonathancastrodeveloper](https://github.com/joncastdev)
+* **Jonathan Castro** - *Software Engineer PHP Laravel* - [joncastdev](https://github.com/joncastdev)
 
 
 ## Support
