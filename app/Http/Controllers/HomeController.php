@@ -7,6 +7,9 @@ use Illuminate\Http\Request;
 // usar clase
 use Illuminate\Support\Facades\Auth;
 
+use App\Repository\Post\PostRepository;
+use App\Repository\PostFree\PostFreeRepository;  
+
 use App\Models\User;
 use App\Models\Category;
 use App\Models\Post;
@@ -23,6 +26,22 @@ use Illuminate\Support\Facades\DB;
 
 class HomeController extends Controller
 {
+
+ protected $posts;
+ protected $postsfree;
+ protected $categorys;
+
+
+ public function __construct(PostRepository $post, PostFreeRepository $postsfree){
+
+  $this->post = $post;
+
+  $this->postsfree = $postsfree;
+
+  // $this->categorys = $categorys;
+
+
+}
     /**
      * Display a listing of the resource.
      *
@@ -31,99 +50,14 @@ class HomeController extends Controller
     public function index()
     {
 
-     //  $categorylastnegocios = Post::select('posts.post_name','posts.url_name','mc.maincategory_name','u.id', 'u.username','posts.updated_at')    
-     //  ->join('maincategorys as mc', 'mc.id', '=', 'posts.maincategory_id')
-     // // ->join('users_posts as up', 'up.maincategory_id', '=', 'posts.maincategory_id')
-     //  ->join('users_posts as up', 'up.post_id', '=', 'posts.id')
-     //  ->join('users as u', 'u.id', '=', 'up.user_id')
-     // // ->join('subcategorys as sc', 'sc.category_id', '=', 'categorys.id')
-     // // ->join('maincategorys', 'mc.subcategory_id', '=', 'sc.id')
-     // // ->where('mc.subcategory_id', 1)
-     // // ->orderBy('mc.id', 'desc')
-     // // ->orderBy('mc.id', 'asc')
-     // // ->orderBy('posts.created_at', 'desc')
-     //  ->orderBy('posts.updated_at', 'desc')   
-     // // ->first();
-     //  ->limit(10)
-     //  ->get();
 
-      $categorylastnegocios = Post::select('posts.post_name','posts.url_name','posts.id as postid','mc.maincategory_name','mc.subcategory_id','u.id as userid', 'u.username','u.img','mc.id','mc.maincategory_url','t.type_name','posts.created_at','posts.updated_at','t.type_color')    
-      ->join('maincategorys as mc', 'mc.id', '=', 'posts.maincategory_id')
-      ->join('types as t', 't.id', '=', 'posts.type_id')
-     // ->join('users_posts as up', 'up.maincategory_id', '=', 'posts.maincategory_id')
-      ->join('users_posts as up', 'up.post_id', '=', 'posts.id')
-      ->join('users as u', 'u.id', '=', 'up.user_id')
-      ->where('mc.subcategory_id', 1)
-      ->where('posts.publish', null)
-     // ->join('subcategorys as sc', 'sc.category_id', '=', 'categorys.id')
-     // ->join('maincategorys', 'mc.subcategory_id', '=', 'sc.id')
-      // ->where('mc.maincategory_url', 1)
-      // ->where('u.is_buyer', 1)
-      // ->where('posts.site_id', 1)
-     // ->where('mc.id', 8)
-      // ->orderBy('mc.id', 'asc')
-      // ->orderBy('posts.created_at', 'desc')
-      ->orderBy('posts.updated_at', 'desc')     
-     // ->first();
-      // ->get()
-      // ->paginate(10);
-      ->limit(5)
-      ->get();
+      $categorylastnegocios = $this->post->getLastPosts(1);
 
-      // dd($categorylastnegocios);
-      // exit;
+      $categorylastservicios =  $this->post->getLastPosts(2);   
 
-      $categorylastservicios = Post::select('posts.post_name','posts.url_name','posts.id as postid','mc.maincategory_name','mc.subcategory_id','u.id as userid', 'u.username','u.img','mc.id','mc.maincategory_url','t.type_name','posts.created_at','posts.updated_at','t.type_color')    
-      ->join('maincategorys as mc', 'mc.id', '=', 'posts.maincategory_id')
-      ->join('types as t', 't.id', '=', 'posts.type_id')
-     // ->join('users_posts as up', 'up.maincategory_id', '=', 'posts.maincategory_id')
-      ->join('users_posts as up', 'up.post_id', '=', 'posts.id')
-      ->join('users as u', 'u.id', '=', 'up.user_id')
-      ->where('mc.subcategory_id', 2)
-      ->where('posts.publish', null)
-     // ->join('subcategorys as sc', 'sc.category_id', '=', 'categorys.id')
-     // ->join('maincategorys', 'mc.subcategory_id', '=', 'sc.id')
-      // ->where('mc.maincategory_url', 1)
-      // ->where('u.is_buyer', 1)
-      // ->where('posts.site_id', 1)
-     // ->where('mc.id', 8)
-      // ->orderBy('mc.id', 'asc')
-      // ->orderBy('posts.created_at', 'desc')
-      ->orderBy('posts.updated_at', 'desc')     
-     // ->first();
-      // ->get()
-      // ->paginate(10);
-      ->limit(5)
-      ->get();
+      $categorylastcomumidad =  $this->postsfree->getLastPosts(3);
 
-
-      $categorylastcomumidad = PostFree::select('posts_free.post_name','posts_free.url_name','posts_free.id as postid','mc.maincategory_name','mc.subcategory_id','u.id as userid', 'u.username','u.img','mc.id','mc.maincategory_url','posts_free.created_at','posts_free.updated_at','cont.content_name','cont.content_color')    
-      ->join('maincategorys as mc', 'mc.id', '=', 'posts_free.maincategory_id')
-      ->join('contents as cont', 'cont.id', '=', 'posts_free.content_id')
-      // ->join('types as t', 't.id', '=', 'posts.type_id')
-     // ->join('users_posts as up', 'up.maincategory_id', '=', 'posts.maincategory_id')
-      ->join('users_posts_free as up', 'up.post_id', '=', 'posts_free.id')
-      ->join('users as u', 'u.id', '=', 'up.user_id')
-      ->where('mc.subcategory_id', 3)
-      ->where('posts_free.publish', null)
-     // ->join('subcategorys as sc', 'sc.category_id', '=', 'categorys.id')
-     // ->join('maincategorys', 'mc.subcategory_id', '=', 'sc.id')
-      // ->where('mc.maincategory_url', 1)
-      // ->where('u.is_buyer', 1)
-      // ->where('posts.site_id', 1)
-     // ->where('mc.id', 8)
-      // ->orderBy('mc.id', 'asc')
-      // ->orderBy('posts.created_at', 'desc')
-      ->orderBy('posts_free.updated_at', 'desc')     
-     // ->first();
-      // ->get()
-      // ->paginate(10);
-      ->limit(5)
-      ->get();
-
-      // $tablelast = array_merge((array)$categorylastnegocios,(array)$categorylastservicios,(array)$categorylastcomumidad);
-
-      $tablelast = array($categorylastnegocios,$categorylastservicios,$categorylastcomumidad );
+      $tablelast = array($categorylastnegocios,$categorylastservicios,$categorylastcomumidad);
 
       // dd($tablelast);
       // exit;
@@ -502,7 +436,7 @@ class HomeController extends Controller
    {
 
     return view('rules');
-    
+
   }
 
 
