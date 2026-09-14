@@ -5,6 +5,13 @@ Laravel open source forum to manage online communities.
 ## About
 A powerful Open Source Business Forum that can be installed on your server.Open source Laravel Forum
 
+- Follow the creator Jonathan Castro:
+    - YouTube: **[youtube.com/@joncastdev](https://youtube.com/@joncastdev)** — Videos every week
+    - Twitch: **[twitch.tv/joncastdev](https://twitch.tv/joncastdev)** — Live coding on Mondays, Wednesdays, and Fridays at 9PM UTC
+    - LinkedIn: **[linkedin.com/in/joncastdev](https://www.linkedin.com/in/joncastdev)**
+    - Instagram: **[instagram.com/joncastdev](https://www.instagram.com/joncastdev)**
+    - Tiktok: **[tiktok.com/@joncastdev](https://www.tiktok.com/@joncastdev)**
+
 ## Starting
 
 _These instructions will allow you to get a copy of the project running on your local machine for development and testing purposes._
@@ -95,6 +102,7 @@ _Pass: Test1234
 _joncastdev@gmail.com_
 
 * If you would like a business forum with many extra features, please contact us with your requirements and budget. Thank you.
+
 
 ## Donations
 
