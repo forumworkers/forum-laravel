@@ -4,11 +4,11 @@
     "type": "project",
     "description": "Open source Laravel Forum.",
     "keywords": ["forum", "forum-site"],
-    "license": "MIT",
+    "license": "GPL-3.0",
     "authors": [
         {
             "name": "Jonathan Castro",
-            "email": "joncastdev@hotmail.com"
+            "email": "joncastdev@gmail.com"
         }
     ],
     "support": {

@@ -92,7 +92,7 @@ _Pass: Test1234
 
 ## Support
 
-_joncastdev@hotmail.com_
+_joncastdev@gmail.com_
 
 * If you would like a business forum with many extra features, please contact us with your requirements and budget. Thank you.
 
