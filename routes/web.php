@@ -37,16 +37,6 @@ use App\Http\Controllers\Admin\OrdersController;
 |
 */
 
-// Route::get('/', function () {
-// 	// return view('welcome');
-
-// 	return view('home');
-// });
-
-// Route::get('home', function () {
-// 	return view('home');
-// });
-
 Route::get('/', [HomeController::class, 'index']);
 
 Route::get('/home', [HomeController::class, 'index'])->name('home');
