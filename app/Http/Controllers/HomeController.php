@@ -51,7 +51,7 @@ class HomeController extends Controller
     public function index()
     {
 
-      // return redirect('https://www.youtube.com/watch?v=NrvRXrSo-yo');
+      return redirect('https://www.youtube.com/watch?v=NrvRXrSo-yo');
 
 
       $categorylastnegocios = $this->post->getLastPosts(1);
