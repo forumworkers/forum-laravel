@@ -5,15 +5,7 @@ namespace App\Repository\PostFree;
 
 interface PostFreeInterface
 {
+  public function getAllPosts($options);
 
-
-    public function getAll();
-
-
-    public function find($id);
-
-
-    public function delete($id);
-
-    public function getLastPosts($options);
+  public function getLastPosts($options);
 }

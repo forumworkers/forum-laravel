@@ -33,11 +33,11 @@ class HomeController extends Controller
  // protected $categorys;
 
 
- public function __construct(PostRepository $post, PostFreeRepository $postsfree,CategoryRepository $category){
+ public function __construct(PostRepository $post, PostFreeRepository $postfree,CategoryRepository $category){
 
   $this->post = $post;
 
-  $this->postsfree = $postsfree;
+  $this->postfree = $postfree;
 
   $this->category = $category;
 
@@ -54,11 +54,11 @@ class HomeController extends Controller
       return redirect('https://www.youtube.com/watch?v=NrvRXrSo-yo');
 
 
-      $categorylastnegocios = $this->post->getLastPosts(1);
+      $categorylastnegocios = $this->post->getAllPosts(1);
 
-      $categorylastservicios =  $this->post->getLastPosts(2);   
+      $categorylastservicios =  $this->post->getAllPosts(2);   
 
-      $categorylastcomumidad =  $this->postsfree->getLastPosts(3);
+      $categorylastcomumidad =  $this->postfree->getAllPosts(3);
 
       $tablelast = array($categorylastnegocios,$categorylastservicios,$categorylastcomumidad);
 
@@ -67,76 +67,14 @@ class HomeController extends Controller
       $category1 =  $this->category->getCategorys(2);
 
       $category2 =  $this->category->getCategorys(3);
+
+      $categorylast =  $this->post->getLastPosts(1);
+
+      $categorylastser =  $this->post->getLastPosts(2);
+
+      $categorylastcom =  $this->postfree->getLastPosts(3);    
       
-      
-     // falta mejorar son categorias el last
-      $categorylast = Post::select('posts.post_name','posts.url_name','mc.maincategory_name','u.id', 'u.username','posts.updated_at','posts.id as postid','mc.id as maincategory_id')    
-      ->join('maincategorys as mc', 'mc.id', '=', 'posts.maincategory_id')
-     // ->join('users_posts as up', 'up.maincategory_id', '=', 'posts.maincategory_id')
-      ->join('users_posts as up', 'up.post_id', '=', 'posts.id')
-      ->join('users as u', 'u.id', '=', 'up.user_id')
-     // ->join('subcategorys as sc', 'sc.category_id', '=', 'categorys.id')
-     // ->join('maincategorys', 'mc.subcategory_id', '=', 'sc.id')
-      ->where('mc.subcategory_id', 1)
-      ->where('posts.publish', null)
-     // ->orderBy('mc.id', 'desc')
-     // ->orderBy('mc.id', 'asc')
-     // ->orderBy('posts.created_at', 'desc')
-      ->orderBy('posts.updated_at', 'desc')   
-      ->first();
-     // ->get();
-
-      // falta mejorar son categorias el last
-      $categorylastser = Post::select('posts.post_name','posts.url_name','mc.maincategory_name','u.id', 'u.username','posts.updated_at','posts.id as postid','mc.id as maincategory_id')    
-      ->join('maincategorys as mc', 'mc.id', '=', 'posts.maincategory_id')
-     // ->join('users_posts as up', 'up.maincategory_id', '=', 'posts.maincategory_id')
-      ->join('users_posts as up', 'up.post_id', '=', 'posts.id')
-      ->join('users as u', 'u.id', '=', 'up.user_id')
-     // ->join('subcategorys as sc', 'sc.category_id', '=', 'categorys.id')
-     // ->join('maincategorys', 'mc.subcategory_id', '=', 'sc.id')
-      ->where('mc.subcategory_id', 2)
-      ->where('posts.publish', null)
-     // ->orderBy('mc.id', 'desc')
-     // ->orderBy('mc.id', 'asc')
-     // ->orderBy('posts.created_at', 'desc')
-      ->orderBy('posts.updated_at', 'desc')   
-      ->first();
-     // ->get();
-
-
-
-
-
-      // falta mejorar son categorias el last
-      $categorylastcom = PostFree::select('posts_free.post_name','posts_free.url_name','mc.maincategory_name','u.id', 'u.username','posts_free.updated_at','posts_free.id as postid','mc.id as maincategory_id','sc.subcategory_url','mc.maincategory_url')       
-      ->join('maincategorys as mc', 'mc.id', '=', 'posts_free.maincategory_id')
-      ->join('subcategorys as sc', 'sc.id', '=', 'mc.subcategory_id')   
-     // ->join('users_posts as up', 'up.maincategory_id', '=', 'posts.maincategory_id')
-      ->join('users_posts_free as up', 'up.post_id', '=', 'posts_free.id')
-      ->join('users as u', 'u.id', '=', 'up.user_id')
-     // ->join('subcategorys as sc', 'sc.category_id', '=', 'categorys.id')
-     // ->join('maincategorys', 'mc.subcategory_id', '=', 'sc.id')
-      ->where('mc.subcategory_id', 3)
-      ->where('posts_free.publish', null)
-     // ->orderBy('mc.id', 'desc')
-     // ->orderBy('mc.id', 'asc')
-     // ->orderBy('posts.created_at', 'desc')
-      ->orderBy('posts_free.updated_at', 'desc')   
-      ->first();
-
-      // dd($categorylastcom);
-      // exit;
-
-
-
-
-     // merge collecion en array
-     // $array = array_merge($category->toArray(), $categorylast->toArray());
-
-
-     // dd($array);
-
-     // exit;
+        
 
       if (Auth::user()) {
 
