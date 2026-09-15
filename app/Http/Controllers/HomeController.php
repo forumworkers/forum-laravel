@@ -8,10 +8,11 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
 use App\Repository\Post\PostRepository;
-use App\Repository\PostFree\PostFreeRepository;  
+use App\Repository\PostFree\PostFreeRepository;
+use App\Repository\Category\CategoryRepository;    
 
 use App\Models\User;
-use App\Models\Category;
+// use App\Models\Category;
 use App\Models\Post;
 use App\Models\Message;
 use App\Models\Country;
@@ -27,18 +28,18 @@ use Illuminate\Support\Facades\DB;
 class HomeController extends Controller
 {
 
- protected $posts;
- protected $postsfree;
- protected $categorys;
+ // protected $posts;
+ // protected $postsfree;
+ // protected $categorys;
 
 
- public function __construct(PostRepository $post, PostFreeRepository $postsfree){
+ public function __construct(PostRepository $post, PostFreeRepository $postsfree,CategoryRepository $category){
 
   $this->post = $post;
 
   $this->postsfree = $postsfree;
 
-  // $this->categorys = $categorys;
+  $this->category = $category;
 
 
 }
@@ -50,7 +51,7 @@ class HomeController extends Controller
     public function index()
     {
 
-      return redirect('https://www.youtube.com/watch?v=NrvRXrSo-yo');
+      // return redirect('https://www.youtube.com/watch?v=NrvRXrSo-yo');
 
 
       $categorylastnegocios = $this->post->getLastPosts(1);
@@ -61,55 +62,13 @@ class HomeController extends Controller
 
       $tablelast = array($categorylastnegocios,$categorylastservicios,$categorylastcomumidad);
 
-      // dd($tablelast);
-      // exit;
+      $category =  $this->category->getCategorys(1);
 
+      $category1 =  $this->category->getCategorys(2);
 
-
-
-
-
-
-      // $id_user = Auth::user()->id;
-
-      // $messagesnavbar = Message::select('messages.message')
-      // ->join('messages_posts as mp', 'mp.message_id', '=', 'messages.id')
-      // ->join('users as u', 'u.id', '=', 'mp.user_id')
-      // ->join('posts as p', 'p.id', '=', 'mp.post_id')
-      // ->where('u.id', $id_user)
-      // ->orderBy('messages.created_at', 'desc')
-      // ->limit(4)
-      // ->get();
-
-      //  $category = Category::select('*')
-      // // ->join('users as u', 'u.id', '=', 'payments.memberId')
-      // // ->where('payments.memberId', $userData->id)
-      // ->get();
-
-      // mejorar este query
-      $category = Category::select('categorys.category_name','sc.subcategory_name','mc.maincategory_icon','mc.maincategory_name','mc.maincategory_url')
-      ->join('subcategorys as sc', 'sc.category_id', '=', 'categorys.id')
-      ->join('maincategorys as mc', 'mc.subcategory_id', '=', 'sc.id')
-      ->where('mc.subcategory_id', 1)
-      ->get();
-      // ->paginate(10);
-
-
-
-     // $category = Category::select('categorys.category_name','sc.subcategory_name','mc.maincategory_name','mc.maincategory_url')
-     // ->join('subcategorys as sc', 'sc.category_id', '=', 'categorys.id')
-     // ->join('maincategorys as mc', 'mc.subcategory_id', '=', 'sc.id')
-     // ->join('users_posts as up', 'up.post_id', '=', 'mc.id')
-     // ->join('users as u', 'u.id', '=', 'up.user_id')
-     // ->where('mc.subcategory_id', 1)
-     // ->get();
-
-
-     //  dd($category);
-
-     // exit;
-
-
+      $category2 =  $this->category->getCategorys(3);
+      
+      
      // falta mejorar son categorias el last
       $categorylast = Post::select('posts.post_name','posts.url_name','mc.maincategory_name','u.id', 'u.username','posts.updated_at','posts.id as postid','mc.id as maincategory_id')    
       ->join('maincategorys as mc', 'mc.id', '=', 'posts.maincategory_id')
@@ -145,31 +104,8 @@ class HomeController extends Controller
      // ->get();
 
 
-     //  dd($categorylast);
-
-     // exit;
-
-      $category1 = Category::select('categorys.category_name','sc.subcategory_name','mc.maincategory_name','mc.maincategory_url','mc.maincategory_icon')
-      ->join('subcategorys as sc', 'sc.category_id', '=', 'categorys.id')
-      ->join('maincategorys as mc', 'mc.subcategory_id', '=', 'sc.id')
-      ->where('mc.subcategory_id', 2)
-      ->get();
-      // ->paginate(10);
 
 
-       // print_r($category);
-
-     // dd($categorylast);
-
-     // exit;
-
-      // para la parte de conversar
-      $category2 = Category::select('categorys.category_name','sc.subcategory_name','mc.maincategory_name','mc.maincategory_url','mc.maincategory_icon')
-      ->join('subcategorys as sc', 'sc.category_id', '=', 'categorys.id')
-      ->join('maincategorys as mc', 'mc.subcategory_id', '=', 'sc.id')
-      ->where('mc.subcategory_id', 3)
-      ->get();
-      // ->paginate(10);
 
       // falta mejorar son categorias el last
       $categorylastcom = PostFree::select('posts_free.post_name','posts_free.url_name','mc.maincategory_name','u.id', 'u.username','posts_free.updated_at','posts_free.id as postid','mc.id as maincategory_id','sc.subcategory_url','mc.maincategory_url')       
