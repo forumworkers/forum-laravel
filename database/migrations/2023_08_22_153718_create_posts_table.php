@@ -36,8 +36,8 @@ return new class extends Migration
 
         // propiedades digitales tiene 11 categorias
         $post = new Post;
-        $post->post_name = 'negocio uno';
-        $post->url_name = 'negocio-uno';
+        $post->post_name = 'business one';
+        $post->url_name = 'business-one';
         $post->post_content = '<h1>Negocio de Ejemplo</h1><br><p>Detalla cada uno de los requisitos</p><br><p>Evita comunicarte en plataformas externas</p><br><p>Investiga la reputacion del cliente o freelance</p><br><p>Toma de ejemplos los tutoriales en youtube</p><br><p>Procura negociar con clientes o freelance que muestren una imagen real de su persona o de su marca</p><br><p>Solo califica cuando estes seguro y se pueden apelar luego de finalizadas</p>';
         //categoria ejemplo dominios
         $post->maincategory_id = 1;
@@ -52,8 +52,8 @@ return new class extends Migration
         $post->save();
 
         $post = new Post;
-        $post->post_name = 'negocio uno';
-        $post->url_name = 'negocio-uno';
+        $post->post_name = 'business one';
+        $post->url_name = 'business-one';
         $post->post_content = '<h1>Negocio de Ejemplo</h1><br><p>Detalla cada uno de los requisitos</p><br><p>Evita comunicarte en plataformas externas</p><br><p>Investiga la reputacion del cliente o freelance</p><br><p>Toma de ejemplos los tutoriales en youtube</p><br><p>Procura negociar con clientes o freelance que muestren una imagen real de su persona o de su marca</p><br><p>Solo califica cuando estes seguro y se pueden apelar luego de finalizadas</p>';
         $post->maincategory_id = 1;
         $post->type_id = 5;
@@ -65,8 +65,8 @@ return new class extends Migration
         $post->save();
 
         $post = new Post;
-        $post->post_name = 'negocio uno';
-        $post->url_name = 'negocio-uno';
+        $post->post_name = 'business one';
+        $post->url_name = 'business-one';
         $post->post_content = '<h1>Negocio de Ejemplo</h1><br><p>Detalla cada uno de los requisitos</p><br><p>Evita comunicarte en plataformas externas</p><br><p>Investiga la reputacion del cliente o freelance</p><br><p>Toma de ejemplos los tutoriales en youtube</p><br><p>Procura negociar con clientes o freelance que muestren una imagen real de su persona o de su marca</p><br><p>Solo califica cuando estes seguro y se pueden apelar luego de finalizadas</p>';
         //categoria ejemplo dominios
         $post->maincategory_id = 2;
@@ -81,8 +81,8 @@ return new class extends Migration
         $post->save();
 
         $post = new Post;
-        $post->post_name = 'negocio uno';
-        $post->url_name = 'negocio-uno';
+        $post->post_name = 'business one';
+        $post->url_name = 'business-one';
         $post->post_content = '<h1>Negocio de Ejemplo</h1><br><p>Detalla cada uno de los requisitos</p><br><p>Evita comunicarte en plataformas externas</p><br><p>Investiga la reputacion del cliente o freelance</p><br><p>Toma de ejemplos los tutoriales en youtube</p><br><p>Procura negociar con clientes o freelance que muestren una imagen real de su persona o de su marca</p><br><p>Solo califica cuando estes seguro y se pueden apelar luego de finalizadas</p>';
         $post->maincategory_id = 2;
         $post->type_id = 5;
@@ -94,8 +94,8 @@ return new class extends Migration
         $post->save();
 
         $post = new Post;
-        $post->post_name = 'negocio uno';
-        $post->url_name = 'negocio-uno';
+        $post->post_name = 'business one';
+        $post->url_name = 'business-one';
         $post->post_content = '<h1>Negocio de Ejemplo</h1><br><p>Detalla cada uno de los requisitos</p><br><p>Evita comunicarte en plataformas externas</p><br><p>Investiga la reputacion del cliente o freelance</p><br><p>Toma de ejemplos los tutoriales en youtube</p><br><p>Procura negociar con clientes o freelance que muestren una imagen real de su persona o de su marca</p><br><p>Solo califica cuando estes seguro y se pueden apelar luego de finalizadas</p>';
         //categoria ejemplo dominios
         $post->maincategory_id = 3;
@@ -110,8 +110,8 @@ return new class extends Migration
         $post->save();
 
         $post = new Post;
-        $post->post_name = 'negocio uno';
-        $post->url_name = 'negocio-uno';
+        $post->post_name = 'business one';
+        $post->url_name = 'business-one';
         $post->post_content = '<h1>Negocio de Ejemplo</h1><br><p>Detalla cada uno de los requisitos</p><br><p>Evita comunicarte en plataformas externas</p><br><p>Investiga la reputacion del cliente o freelance</p><br><p>Toma de ejemplos los tutoriales en youtube</p><br><p>Procura negociar con clientes o freelance que muestren una imagen real de su persona o de su marca</p><br><p>Solo califica cuando estes seguro y se pueden apelar luego de finalizadas</p>';
         $post->maincategory_id = 3;
         $post->type_id = 5;
@@ -123,8 +123,8 @@ return new class extends Migration
         $post->save();
 
         $post = new Post;
-        $post->post_name = 'negocio uno';
-        $post->url_name = 'negocio-uno';
+        $post->post_name = 'business one';
+        $post->url_name = 'business-one';
         $post->post_content = '<h1>Negocio de Ejemplo</h1><br><p>Detalla cada uno de los requisitos</p><br><p>Evita comunicarte en plataformas externas</p><br><p>Investiga la reputacion del cliente o freelance</p><br><p>Toma de ejemplos los tutoriales en youtube</p><br><p>Procura negociar con clientes o freelance que muestren una imagen real de su persona o de su marca</p><br><p>Solo califica cuando estes seguro y se pueden apelar luego de finalizadas</p>';
         //categoria ejemplo dominios
         $post->maincategory_id = 4;
@@ -139,8 +139,8 @@ return new class extends Migration
         $post->save();
 
         $post = new Post;
-        $post->post_name = 'negocio uno';
-        $post->url_name = 'negocio-uno';
+        $post->post_name = 'business one';
+        $post->url_name = 'business-one';
         $post->post_content = '<h1>Negocio de Ejemplo</h1><br><p>Detalla cada uno de los requisitos</p><br><p>Evita comunicarte en plataformas externas</p><br><p>Investiga la reputacion del cliente o freelance</p><br><p>Toma de ejemplos los tutoriales en youtube</p><br><p>Procura negociar con clientes o freelance que muestren una imagen real de su persona o de su marca</p><br><p>Solo califica cuando estes seguro y se pueden apelar luego de finalizadas</p>';
         $post->maincategory_id = 4;
         $post->type_id = 5;
@@ -152,8 +152,8 @@ return new class extends Migration
         $post->save();
 
         $post = new Post;
-        $post->post_name = 'negocio uno';
-        $post->url_name = 'negocio-uno';
+        $post->post_name = 'business one';
+        $post->url_name = 'business-one';
         $post->post_content = '<h1>Negocio de Ejemplo</h1><br><p>Detalla cada uno de los requisitos</p><br><p>Evita comunicarte en plataformas externas</p><br><p>Investiga la reputacion del cliente o freelance</p><br><p>Toma de ejemplos los tutoriales en youtube</p><br><p>Procura negociar con clientes o freelance que muestren una imagen real de su persona o de su marca</p><br><p>Solo califica cuando estes seguro y se pueden apelar luego de finalizadas</p>';
         //categoria ejemplo dominios
         $post->maincategory_id = 5;
@@ -168,8 +168,8 @@ return new class extends Migration
         $post->save();
 
         $post = new Post;
-        $post->post_name = 'negocio uno';
-        $post->url_name = 'negocio-uno';
+        $post->post_name = 'business one';
+        $post->url_name = 'business-one';
         $post->post_content = '<h1>Negocio de Ejemplo</h1><br><p>Detalla cada uno de los requisitos</p><br><p>Evita comunicarte en plataformas externas</p><br><p>Investiga la reputacion del cliente o freelance</p><br><p>Toma de ejemplos los tutoriales en youtube</p><br><p>Procura negociar con clientes o freelance que muestren una imagen real de su persona o de su marca</p><br><p>Solo califica cuando estes seguro y se pueden apelar luego de finalizadas</p>';
         $post->maincategory_id = 5;
         $post->type_id = 5;
@@ -181,8 +181,8 @@ return new class extends Migration
         $post->save();
 
         $post = new Post;
-        $post->post_name = 'negocio uno';
-        $post->url_name = 'negocio-uno';
+        $post->post_name = 'business one';
+        $post->url_name = 'business-one';
         $post->post_content = '<h1>Negocio de Ejemplo</h1><br><p>Detalla cada uno de los requisitos</p><br><p>Evita comunicarte en plataformas externas</p><br><p>Investiga la reputacion del cliente o freelance</p><br><p>Toma de ejemplos los tutoriales en youtube</p><br><p>Procura negociar con clientes o freelance que muestren una imagen real de su persona o de su marca</p><br><p>Solo califica cuando estes seguro y se pueden apelar luego de finalizadas</p>';
         //categoria ejemplo dominios
         $post->maincategory_id = 6;
@@ -197,8 +197,8 @@ return new class extends Migration
         $post->save();
 
         $post = new Post;
-        $post->post_name = 'negocio uno';
-        $post->url_name = 'negocio-uno';
+        $post->post_name = 'business one';
+        $post->url_name = 'business-one';
         $post->post_content = '<h1>Negocio de Ejemplo</h1><br><p>Detalla cada uno de los requisitos</p><br><p>Evita comunicarte en plataformas externas</p><br><p>Investiga la reputacion del cliente o freelance</p><br><p>Toma de ejemplos los tutoriales en youtube</p><br><p>Procura negociar con clientes o freelance que muestren una imagen real de su persona o de su marca</p><br><p>Solo califica cuando estes seguro y se pueden apelar luego de finalizadas</p>';
         $post->maincategory_id = 6;
         $post->type_id = 5;
@@ -210,8 +210,8 @@ return new class extends Migration
         $post->save();
 
         $post = new Post;
-        $post->post_name = 'negocio uno';
-        $post->url_name = 'negocio-uno';
+        $post->post_name = 'business one';
+        $post->url_name = 'business-one';
         $post->post_content = '<h1>Negocio de Ejemplo</h1><br><p>Detalla cada uno de los requisitos</p><br><p>Evita comunicarte en plataformas externas</p><br><p>Investiga la reputacion del cliente o freelance</p><br><p>Toma de ejemplos los tutoriales en youtube</p><br><p>Procura negociar con clientes o freelance que muestren una imagen real de su persona o de su marca</p><br><p>Solo califica cuando estes seguro y se pueden apelar luego de finalizadas</p>';
         //categoria ejemplo dominios
         $post->maincategory_id = 7;
@@ -226,8 +226,8 @@ return new class extends Migration
         $post->save();
 
         $post = new Post;
-        $post->post_name = 'negocio uno';
-        $post->url_name = 'negocio-uno';
+        $post->post_name = 'business one';
+        $post->url_name = 'business-one';
         $post->post_content = '<h1>Negocio de Ejemplo</h1><br><p>Detalla cada uno de los requisitos</p><br><p>Evita comunicarte en plataformas externas</p><br><p>Investiga la reputacion del cliente o freelance</p><br><p>Toma de ejemplos los tutoriales en youtube</p><br><p>Procura negociar con clientes o freelance que muestren una imagen real de su persona o de su marca</p><br><p>Solo califica cuando estes seguro y se pueden apelar luego de finalizadas</p>';
         $post->maincategory_id = 7;
         $post->type_id = 5;
@@ -239,8 +239,8 @@ return new class extends Migration
         $post->save();
 
         $post = new Post;
-        $post->post_name = 'negocio uno';
-        $post->url_name = 'negocio-uno';
+        $post->post_name = 'business one';
+        $post->url_name = 'business-one';
         $post->post_content = '<h1>Negocio de Ejemplo</h1><br><p>Detalla cada uno de los requisitos</p><br><p>Evita comunicarte en plataformas externas</p><br><p>Investiga la reputacion del cliente o freelance</p><br><p>Toma de ejemplos los tutoriales en youtube</p><br><p>Procura negociar con clientes o freelance que muestren una imagen real de su persona o de su marca</p><br><p>Solo califica cuando estes seguro y se pueden apelar luego de finalizadas</p>';
         //categoria ejemplo dominios
         $post->maincategory_id = 8;
@@ -255,8 +255,8 @@ return new class extends Migration
         $post->save();
 
         $post = new Post;
-        $post->post_name = 'negocio uno';
-        $post->url_name = 'negocio-uno';
+        $post->post_name = 'business one';
+        $post->url_name = 'business-one';
         $post->post_content = '<h1>Negocio de Ejemplo</h1><br><p>Detalla cada uno de los requisitos</p><br><p>Evita comunicarte en plataformas externas</p><br><p>Investiga la reputacion del cliente o freelance</p><br><p>Toma de ejemplos los tutoriales en youtube</p><br><p>Procura negociar con clientes o freelance que muestren una imagen real de su persona o de su marca</p><br><p>Solo califica cuando estes seguro y se pueden apelar luego de finalizadas</p>';
         $post->maincategory_id = 8;
         $post->type_id = 5;
@@ -268,8 +268,8 @@ return new class extends Migration
         $post->save();
 
         $post = new Post;
-        $post->post_name = 'negocio uno';
-        $post->url_name = 'negocio-uno';
+        $post->post_name = 'business one';
+        $post->url_name = 'business-one';
         $post->post_content = '<h1>Negocio de Ejemplo</h1><br><p>Detalla cada uno de los requisitos</p><br><p>Evita comunicarte en plataformas externas</p><br><p>Investiga la reputacion del cliente o freelance</p><br><p>Toma de ejemplos los tutoriales en youtube</p><br><p>Procura negociar con clientes o freelance que muestren una imagen real de su persona o de su marca</p><br><p>Solo califica cuando estes seguro y se pueden apelar luego de finalizadas</p>';
         //categoria ejemplo dominios
         $post->maincategory_id = 9;
@@ -284,8 +284,8 @@ return new class extends Migration
         $post->save();
 
         $post = new Post;
-        $post->post_name = 'negocio uno';
-        $post->url_name = 'negocio-uno';
+        $post->post_name = 'business one';
+        $post->url_name = 'business-one';
         $post->post_content = '<h1>Negocio de Ejemplo</h1><br><p>Detalla cada uno de los requisitos</p><br><p>Evita comunicarte en plataformas externas</p><br><p>Investiga la reputacion del cliente o freelance</p><br><p>Toma de ejemplos los tutoriales en youtube</p><br><p>Procura negociar con clientes o freelance que muestren una imagen real de su persona o de su marca</p><br><p>Solo califica cuando estes seguro y se pueden apelar luego de finalizadas</p>';
         $post->maincategory_id = 9;
         $post->type_id = 5;
@@ -297,8 +297,8 @@ return new class extends Migration
         $post->save();
 
         $post = new Post;
-        $post->post_name = 'negocio uno';
-        $post->url_name = 'negocio-uno';
+        $post->post_name = 'business one';
+        $post->url_name = 'business-one';
         $post->post_content = '<h1>Negocio de Ejemplo</h1><br><p>Detalla cada uno de los requisitos</p><br><p>Evita comunicarte en plataformas externas</p><br><p>Investiga la reputacion del cliente o freelance</p><br><p>Toma de ejemplos los tutoriales en youtube</p><br><p>Procura negociar con clientes o freelance que muestren una imagen real de su persona o de su marca</p><br><p>Solo califica cuando estes seguro y se pueden apelar luego de finalizadas</p>';
         //categoria ejemplo dominios
         $post->maincategory_id = 10;
@@ -313,8 +313,8 @@ return new class extends Migration
         $post->save();
 
         $post = new Post;
-        $post->post_name = 'negocio uno';
-        $post->url_name = 'negocio-uno';
+        $post->post_name = 'business one';
+        $post->url_name = 'business-one';
         $post->post_content = '<h1>Negocio de Ejemplo</h1><br><p>Detalla cada uno de los requisitos</p><br><p>Evita comunicarte en plataformas externas</p><br><p>Investiga la reputacion del cliente o freelance</p><br><p>Toma de ejemplos los tutoriales en youtube</p><br><p>Procura negociar con clientes o freelance que muestren una imagen real de su persona o de su marca</p><br><p>Solo califica cuando estes seguro y se pueden apelar luego de finalizadas</p>';
         $post->maincategory_id = 10;
         $post->type_id = 5;
@@ -326,8 +326,8 @@ return new class extends Migration
         $post->save();
 
         $post = new Post;
-        $post->post_name = 'negocio uno';
-        $post->url_name = 'negocio-uno';
+        $post->post_name = 'business one';
+        $post->url_name = 'business-one';
         $post->post_content = '<h1>Negocio de Ejemplo</h1><br><p>Detalla cada uno de los requisitos</p><br><p>Evita comunicarte en plataformas externas</p><br><p>Investiga la reputacion del cliente o freelance</p><br><p>Toma de ejemplos los tutoriales en youtube</p><br><p>Procura negociar con clientes o freelance que muestren una imagen real de su persona o de su marca</p><br><p>Solo califica cuando estes seguro y se pueden apelar luego de finalizadas</p>';
         //categoria ejemplo dominios
         $post->maincategory_id = 11;
@@ -342,8 +342,8 @@ return new class extends Migration
         $post->save();
 
         $post = new Post;
-        $post->post_name = 'negocio uno';
-        $post->url_name = 'negocio-uno';
+        $post->post_name = 'business one';
+        $post->url_name = 'business-one';
         $post->post_content = '<h1>Negocio de Ejemplo</h1><br><p>Detalla cada uno de los requisitos</p><br><p>Evita comunicarte en plataformas externas</p><br><p>Investiga la reputacion del cliente o freelance</p><br><p>Toma de ejemplos los tutoriales en youtube</p><br><p>Procura negociar con clientes o freelance que muestren una imagen real de su persona o de su marca</p><br><p>Solo califica cuando estes seguro y se pueden apelar luego de finalizadas</p>';
         $post->maincategory_id = 11;
         $post->type_id = 5;
@@ -356,8 +356,8 @@ return new class extends Migration
 
         // Servicios son 29
         $post = new Post;
-        $post->post_name = 'negocio uno';
-        $post->url_name = 'negocio-uno';
+        $post->post_name = 'business one';
+        $post->url_name = 'business-one';
         $post->post_content = '<h1>Negocio de Ejemplo</h1><br><p>Detalla cada uno de los requisitos</p><br><p>Evita comunicarte en plataformas externas</p><br><p>Investiga la reputacion del cliente o freelance</p><br><p>Toma de ejemplos los tutoriales en youtube</p><br><p>Procura negociar con clientes o freelance que muestren una imagen real de su persona o de su marca</p><br><p>Solo califica cuando estes seguro y se pueden apelar luego de finalizadas</p>';
         //categoria ejemplo dominios
         $post->maincategory_id = 12;
@@ -372,8 +372,8 @@ return new class extends Migration
         $post->save();
 
         $post = new Post;
-        $post->post_name = 'negocio uno';
-        $post->url_name = 'negocio-uno';
+        $post->post_name = 'business one';
+        $post->url_name = 'business-one';
         $post->post_content = '<h1>Negocio de Ejemplo</h1><br><p>Detalla cada uno de los requisitos</p><br><p>Evita comunicarte en plataformas externas</p><br><p>Investiga la reputacion del cliente o freelance</p><br><p>Toma de ejemplos los tutoriales en youtube</p><br><p>Procura negociar con clientes o freelance que muestren una imagen real de su persona o de su marca</p><br><p>Solo califica cuando estes seguro y se pueden apelar luego de finalizadas</p>';
         $post->maincategory_id = 12;
         $post->type_id = 2;
@@ -385,8 +385,8 @@ return new class extends Migration
         $post->save();
 
         $post = new Post;
-        $post->post_name = 'negocio uno';
-        $post->url_name = 'negocio-uno';
+        $post->post_name = 'business one';
+        $post->url_name = 'business-one';
         $post->post_content = '<h1>Negocio de Ejemplo</h1><br><p>Detalla cada uno de los requisitos</p><br><p>Evita comunicarte en plataformas externas</p><br><p>Investiga la reputacion del cliente o freelance</p><br><p>Toma de ejemplos los tutoriales en youtube</p><br><p>Procura negociar con clientes o freelance que muestren una imagen real de su persona o de su marca</p><br><p>Solo califica cuando estes seguro y se pueden apelar luego de finalizadas</p>';
         //categoria ejemplo dominios
         $post->maincategory_id = 13;
@@ -401,8 +401,8 @@ return new class extends Migration
         $post->save();
 
         $post = new Post;
-        $post->post_name = 'negocio uno';
-        $post->url_name = 'negocio-uno';
+        $post->post_name = 'business one';
+        $post->url_name = 'business-one';
         $post->post_content = '<h1>Negocio de Ejemplo</h1><br><p>Detalla cada uno de los requisitos</p><br><p>Evita comunicarte en plataformas externas</p><br><p>Investiga la reputacion del cliente o freelance</p><br><p>Toma de ejemplos los tutoriales en youtube</p><br><p>Procura negociar con clientes o freelance que muestren una imagen real de su persona o de su marca</p><br><p>Solo califica cuando estes seguro y se pueden apelar luego de finalizadas</p>';
         $post->maincategory_id = 13;
         $post->type_id = 2;
@@ -414,8 +414,8 @@ return new class extends Migration
         $post->save();
 
         $post = new Post;
-        $post->post_name = 'negocio uno';
-        $post->url_name = 'negocio-uno';
+        $post->post_name = 'business one';
+        $post->url_name = 'business-one';
         $post->post_content = '<h1>Negocio de Ejemplo</h1><br><p>Detalla cada uno de los requisitos</p><br><p>Evita comunicarte en plataformas externas</p><br><p>Investiga la reputacion del cliente o freelance</p><br><p>Toma de ejemplos los tutoriales en youtube</p><br><p>Procura negociar con clientes o freelance que muestren una imagen real de su persona o de su marca</p><br><p>Solo califica cuando estes seguro y se pueden apelar luego de finalizadas</p>';
         //categoria ejemplo dominios
         $post->maincategory_id = 14;
@@ -430,8 +430,8 @@ return new class extends Migration
         $post->save();
 
         $post = new Post;
-        $post->post_name = 'negocio uno';
-        $post->url_name = 'negocio-uno';
+        $post->post_name = 'business one';
+        $post->url_name = 'business-one';
         $post->post_content = '<h1>Negocio de Ejemplo</h1><br><p>Detalla cada uno de los requisitos</p><br><p>Evita comunicarte en plataformas externas</p><br><p>Investiga la reputacion del cliente o freelance</p><br><p>Toma de ejemplos los tutoriales en youtube</p><br><p>Procura negociar con clientes o freelance que muestren una imagen real de su persona o de su marca</p><br><p>Solo califica cuando estes seguro y se pueden apelar luego de finalizadas</p>';
         $post->maincategory_id = 14;
         $post->type_id = 2;
@@ -443,8 +443,8 @@ return new class extends Migration
         $post->save();
 
         $post = new Post;
-        $post->post_name = 'negocio uno';
-        $post->url_name = 'negocio-uno';
+        $post->post_name = 'business one';
+        $post->url_name = 'business-one';
         $post->post_content = '<h1>Negocio de Ejemplo</h1><br><p>Detalla cada uno de los requisitos</p><br><p>Evita comunicarte en plataformas externas</p><br><p>Investiga la reputacion del cliente o freelance</p><br><p>Toma de ejemplos los tutoriales en youtube</p><br><p>Procura negociar con clientes o freelance que muestren una imagen real de su persona o de su marca</p><br><p>Solo califica cuando estes seguro y se pueden apelar luego de finalizadas</p>';
         //categoria ejemplo dominios
         $post->maincategory_id = 15;
@@ -459,8 +459,8 @@ return new class extends Migration
         $post->save();
 
         $post = new Post;
-        $post->post_name = 'negocio uno';
-        $post->url_name = 'negocio-uno';
+        $post->post_name = 'business one';
+        $post->url_name = 'business-one';
         $post->post_content = '<h1>Negocio de Ejemplo</h1><br><p>Detalla cada uno de los requisitos</p><br><p>Evita comunicarte en plataformas externas</p><br><p>Investiga la reputacion del cliente o freelance</p><br><p>Toma de ejemplos los tutoriales en youtube</p><br><p>Procura negociar con clientes o freelance que muestren una imagen real de su persona o de su marca</p><br><p>Solo califica cuando estes seguro y se pueden apelar luego de finalizadas</p>';
         $post->maincategory_id = 15;
         $post->type_id = 2;
@@ -472,8 +472,8 @@ return new class extends Migration
         $post->save();
 
         $post = new Post;
-        $post->post_name = 'negocio uno';
-        $post->url_name = 'negocio-uno';
+        $post->post_name = 'business one';
+        $post->url_name = 'business-one';
         $post->post_content = '<h1>Negocio de Ejemplo</h1><br><p>Detalla cada uno de los requisitos</p><br><p>Evita comunicarte en plataformas externas</p><br><p>Investiga la reputacion del cliente o freelance</p><br><p>Toma de ejemplos los tutoriales en youtube</p><br><p>Procura negociar con clientes o freelance que muestren una imagen real de su persona o de su marca</p><br><p>Solo califica cuando estes seguro y se pueden apelar luego de finalizadas</p>';
         //categoria ejemplo dominios
         $post->maincategory_id = 16;
@@ -488,8 +488,8 @@ return new class extends Migration
         $post->save();
 
         $post = new Post;
-        $post->post_name = 'negocio uno';
-        $post->url_name = 'negocio-uno';
+        $post->post_name = 'business one';
+        $post->url_name = 'business-one';
         $post->post_content = '<h1>Negocio de Ejemplo</h1><br><p>Detalla cada uno de los requisitos</p><br><p>Evita comunicarte en plataformas externas</p><br><p>Investiga la reputacion del cliente o freelance</p><br><p>Toma de ejemplos los tutoriales en youtube</p><br><p>Procura negociar con clientes o freelance que muestren una imagen real de su persona o de su marca</p><br><p>Solo califica cuando estes seguro y se pueden apelar luego de finalizadas</p>';
         $post->maincategory_id = 16;
         $post->type_id = 2;
@@ -501,8 +501,8 @@ return new class extends Migration
         $post->save();
 
         $post = new Post;
-        $post->post_name = 'negocio uno';
-        $post->url_name = 'negocio-uno';
+        $post->post_name = 'business one';
+        $post->url_name = 'business-one';
         $post->post_content = '<h1>Negocio de Ejemplo</h1><br><p>Detalla cada uno de los requisitos</p><br><p>Evita comunicarte en plataformas externas</p><br><p>Investiga la reputacion del cliente o freelance</p><br><p>Toma de ejemplos los tutoriales en youtube</p><br><p>Procura negociar con clientes o freelance que muestren una imagen real de su persona o de su marca</p><br><p>Solo califica cuando estes seguro y se pueden apelar luego de finalizadas</p>';
         //categoria ejemplo dominios
         $post->maincategory_id = 17;
@@ -517,8 +517,8 @@ return new class extends Migration
         $post->save();
 
         $post = new Post;
-        $post->post_name = 'negocio uno';
-        $post->url_name = 'negocio-uno';
+        $post->post_name = 'business one';
+        $post->url_name = 'business-one';
         $post->post_content = '<h1>Negocio de Ejemplo</h1><br><p>Detalla cada uno de los requisitos</p><br><p>Evita comunicarte en plataformas externas</p><br><p>Investiga la reputacion del cliente o freelance</p><br><p>Toma de ejemplos los tutoriales en youtube</p><br><p>Procura negociar con clientes o freelance que muestren una imagen real de su persona o de su marca</p><br><p>Solo califica cuando estes seguro y se pueden apelar luego de finalizadas</p>';
         $post->maincategory_id = 17;
         $post->type_id = 2;
@@ -530,8 +530,8 @@ return new class extends Migration
         $post->save();
 
         $post = new Post;
-        $post->post_name = 'negocio uno';
-        $post->url_name = 'negocio-uno';
+        $post->post_name = 'business one';
+        $post->url_name = 'business-one';
         $post->post_content = '<h1>Negocio de Ejemplo</h1><br><p>Detalla cada uno de los requisitos</p><br><p>Evita comunicarte en plataformas externas</p><br><p>Investiga la reputacion del cliente o freelance</p><br><p>Toma de ejemplos los tutoriales en youtube</p><br><p>Procura negociar con clientes o freelance que muestren una imagen real de su persona o de su marca</p><br><p>Solo califica cuando estes seguro y se pueden apelar luego de finalizadas</p>';
         //categoria ejemplo dominios
         $post->maincategory_id = 18;
@@ -546,8 +546,8 @@ return new class extends Migration
         $post->save();
 
         $post = new Post;
-        $post->post_name = 'negocio uno';
-        $post->url_name = 'negocio-uno';
+        $post->post_name = 'business one';
+        $post->url_name = 'business-one';
         $post->post_content = '<h1>Negocio de Ejemplo</h1><br><p>Detalla cada uno de los requisitos</p><br><p>Evita comunicarte en plataformas externas</p><br><p>Investiga la reputacion del cliente o freelance</p><br><p>Toma de ejemplos los tutoriales en youtube</p><br><p>Procura negociar con clientes o freelance que muestren una imagen real de su persona o de su marca</p><br><p>Solo califica cuando estes seguro y se pueden apelar luego de finalizadas</p>';
         $post->maincategory_id = 18;
         $post->type_id = 2;
@@ -559,8 +559,8 @@ return new class extends Migration
         $post->save();
 
         $post = new Post;
-        $post->post_name = 'negocio uno';
-        $post->url_name = 'negocio-uno';
+        $post->post_name = 'business one';
+        $post->url_name = 'business-one';
         $post->post_content = '<h1>Negocio de Ejemplo</h1><br><p>Detalla cada uno de los requisitos</p><br><p>Evita comunicarte en plataformas externas</p><br><p>Investiga la reputacion del cliente o freelance</p><br><p>Toma de ejemplos los tutoriales en youtube</p><br><p>Procura negociar con clientes o freelance que muestren una imagen real de su persona o de su marca</p><br><p>Solo califica cuando estes seguro y se pueden apelar luego de finalizadas</p>';
         //categoria ejemplo dominios
         $post->maincategory_id = 19;
@@ -575,8 +575,8 @@ return new class extends Migration
         $post->save();
 
         $post = new Post;
-        $post->post_name = 'negocio uno';
-        $post->url_name = 'negocio-uno';
+        $post->post_name = 'business one';
+        $post->url_name = 'business-one';
         $post->post_content = '<h1>Negocio de Ejemplo</h1><br><p>Detalla cada uno de los requisitos</p><br><p>Evita comunicarte en plataformas externas</p><br><p>Investiga la reputacion del cliente o freelance</p><br><p>Toma de ejemplos los tutoriales en youtube</p><br><p>Procura negociar con clientes o freelance que muestren una imagen real de su persona o de su marca</p><br><p>Solo califica cuando estes seguro y se pueden apelar luego de finalizadas</p>';
         $post->maincategory_id = 19;
         $post->type_id = 2;
@@ -588,8 +588,8 @@ return new class extends Migration
         $post->save();
 
         $post = new Post;
-        $post->post_name = 'negocio uno';
-        $post->url_name = 'negocio-uno';
+        $post->post_name = 'business one';
+        $post->url_name = 'business-one';
         $post->post_content = '<h1>Negocio de Ejemplo</h1><br><p>Detalla cada uno de los requisitos</p><br><p>Evita comunicarte en plataformas externas</p><br><p>Investiga la reputacion del cliente o freelance</p><br><p>Toma de ejemplos los tutoriales en youtube</p><br><p>Procura negociar con clientes o freelance que muestren una imagen real de su persona o de su marca</p><br><p>Solo califica cuando estes seguro y se pueden apelar luego de finalizadas</p>';
         //categoria ejemplo dominios
         $post->maincategory_id = 20;
@@ -604,8 +604,8 @@ return new class extends Migration
         $post->save();
 
         $post = new Post;
-        $post->post_name = 'negocio uno';
-        $post->url_name = 'negocio-uno';
+        $post->post_name = 'business one';
+        $post->url_name = 'business-one';
         $post->post_content = '<h1>Negocio de Ejemplo</h1><br><p>Detalla cada uno de los requisitos</p><br><p>Evita comunicarte en plataformas externas</p><br><p>Investiga la reputacion del cliente o freelance</p><br><p>Toma de ejemplos los tutoriales en youtube</p><br><p>Procura negociar con clientes o freelance que muestren una imagen real de su persona o de su marca</p><br><p>Solo califica cuando estes seguro y se pueden apelar luego de finalizadas</p>';
         $post->maincategory_id = 20;
         $post->type_id = 2;
@@ -617,8 +617,8 @@ return new class extends Migration
         $post->save();
 
         $post = new Post;
-        $post->post_name = 'negocio uno';
-        $post->url_name = 'negocio-uno';
+        $post->post_name = 'business one';
+        $post->url_name = 'business-one';
         $post->post_content = '<h1>Negocio de Ejemplo</h1><br><p>Detalla cada uno de los requisitos</p><br><p>Evita comunicarte en plataformas externas</p><br><p>Investiga la reputacion del cliente o freelance</p><br><p>Toma de ejemplos los tutoriales en youtube</p><br><p>Procura negociar con clientes o freelance que muestren una imagen real de su persona o de su marca</p><br><p>Solo califica cuando estes seguro y se pueden apelar luego de finalizadas</p>';
         //categoria ejemplo dominios
         $post->maincategory_id = 21;
@@ -633,8 +633,8 @@ return new class extends Migration
         $post->save();
 
         $post = new Post;
-        $post->post_name = 'negocio uno';
-        $post->url_name = 'negocio-uno';
+        $post->post_name = 'business one';
+        $post->url_name = 'business-one';
         $post->post_content = '<h1>Negocio de Ejemplo</h1><br><p>Detalla cada uno de los requisitos</p><br><p>Evita comunicarte en plataformas externas</p><br><p>Investiga la reputacion del cliente o freelance</p><br><p>Toma de ejemplos los tutoriales en youtube</p><br><p>Procura negociar con clientes o freelance que muestren una imagen real de su persona o de su marca</p><br><p>Solo califica cuando estes seguro y se pueden apelar luego de finalizadas</p>';
         $post->maincategory_id = 21;
         $post->type_id = 2;
@@ -646,8 +646,8 @@ return new class extends Migration
         $post->save();
 
         $post = new Post;
-        $post->post_name = 'negocio uno';
-        $post->url_name = 'negocio-uno';
+        $post->post_name = 'business one';
+        $post->url_name = 'business-one';
         $post->post_content = '<h1>Negocio de Ejemplo</h1><br><p>Detalla cada uno de los requisitos</p><br><p>Evita comunicarte en plataformas externas</p><br><p>Investiga la reputacion del cliente o freelance</p><br><p>Toma de ejemplos los tutoriales en youtube</p><br><p>Procura negociar con clientes o freelance que muestren una imagen real de su persona o de su marca</p><br><p>Solo califica cuando estes seguro y se pueden apelar luego de finalizadas</p>';
         //categoria ejemplo dominios
         $post->maincategory_id = 22;
@@ -662,8 +662,8 @@ return new class extends Migration
         $post->save();
 
         $post = new Post;
-        $post->post_name = 'negocio uno';
-        $post->url_name = 'negocio-uno';
+        $post->post_name = 'business one';
+        $post->url_name = 'business-one';
         $post->post_content = '<h1>Negocio de Ejemplo</h1><br><p>Detalla cada uno de los requisitos</p><br><p>Evita comunicarte en plataformas externas</p><br><p>Investiga la reputacion del cliente o freelance</p><br><p>Toma de ejemplos los tutoriales en youtube</p><br><p>Procura negociar con clientes o freelance que muestren una imagen real de su persona o de su marca</p><br><p>Solo califica cuando estes seguro y se pueden apelar luego de finalizadas</p>';
         $post->maincategory_id = 22;
         $post->type_id = 2;
@@ -675,8 +675,8 @@ return new class extends Migration
         $post->save();
 
         $post = new Post;
-        $post->post_name = 'negocio uno';
-        $post->url_name = 'negocio-uno';
+        $post->post_name = 'business one';
+        $post->url_name = 'business-one';
         $post->post_content = '<h1>Negocio de Ejemplo</h1><br><p>Detalla cada uno de los requisitos</p><br><p>Evita comunicarte en plataformas externas</p><br><p>Investiga la reputacion del cliente o freelance</p><br><p>Toma de ejemplos los tutoriales en youtube</p><br><p>Procura negociar con clientes o freelance que muestren una imagen real de su persona o de su marca</p><br><p>Solo califica cuando estes seguro y se pueden apelar luego de finalizadas</p>';
         //categoria ejemplo dominios
         $post->maincategory_id = 23;
@@ -691,8 +691,8 @@ return new class extends Migration
         $post->save();
 
         $post = new Post;
-        $post->post_name = 'negocio uno';
-        $post->url_name = 'negocio-uno';
+        $post->post_name = 'business one';
+        $post->url_name = 'business-one';
         $post->post_content = '<h1>Negocio de Ejemplo</h1><br><p>Detalla cada uno de los requisitos</p><br><p>Evita comunicarte en plataformas externas</p><br><p>Investiga la reputacion del cliente o freelance</p><br><p>Toma de ejemplos los tutoriales en youtube</p><br><p>Procura negociar con clientes o freelance que muestren una imagen real de su persona o de su marca</p><br><p>Solo califica cuando estes seguro y se pueden apelar luego de finalizadas</p>';
         $post->maincategory_id = 23;
         $post->type_id = 2;
@@ -704,8 +704,8 @@ return new class extends Migration
         $post->save();
 
         $post = new Post;
-        $post->post_name = 'negocio uno';
-        $post->url_name = 'negocio-uno';
+        $post->post_name = 'business one';
+        $post->url_name = 'business-one';
         $post->post_content = '<h1>Negocio de Ejemplo</h1><br><p>Detalla cada uno de los requisitos</p><br><p>Evita comunicarte en plataformas externas</p><br><p>Investiga la reputacion del cliente o freelance</p><br><p>Toma de ejemplos los tutoriales en youtube</p><br><p>Procura negociar con clientes o freelance que muestren una imagen real de su persona o de su marca</p><br><p>Solo califica cuando estes seguro y se pueden apelar luego de finalizadas</p>';
         //categoria ejemplo dominios
         $post->maincategory_id = 24;
@@ -720,8 +720,8 @@ return new class extends Migration
         $post->save();
 
         $post = new Post;
-        $post->post_name = 'negocio uno';
-        $post->url_name = 'negocio-uno';
+        $post->post_name = 'business one';
+        $post->url_name = 'business-one';
         $post->post_content = '<h1>Negocio de Ejemplo</h1><br><p>Detalla cada uno de los requisitos</p><br><p>Evita comunicarte en plataformas externas</p><br><p>Investiga la reputacion del cliente o freelance</p><br><p>Toma de ejemplos los tutoriales en youtube</p><br><p>Procura negociar con clientes o freelance que muestren una imagen real de su persona o de su marca</p><br><p>Solo califica cuando estes seguro y se pueden apelar luego de finalizadas</p>';
         $post->maincategory_id = 24;
         $post->type_id = 2;
@@ -733,8 +733,8 @@ return new class extends Migration
         $post->save();
 
         $post = new Post;
-        $post->post_name = 'negocio uno';
-        $post->url_name = 'negocio-uno';
+        $post->post_name = 'business one';
+        $post->url_name = 'business-one';
         $post->post_content = '<h1>Negocio de Ejemplo</h1><br><p>Detalla cada uno de los requisitos</p><br><p>Evita comunicarte en plataformas externas</p><br><p>Investiga la reputacion del cliente o freelance</p><br><p>Toma de ejemplos los tutoriales en youtube</p><br><p>Procura negociar con clientes o freelance que muestren una imagen real de su persona o de su marca</p><br><p>Solo califica cuando estes seguro y se pueden apelar luego de finalizadas</p>';
         //categoria ejemplo dominios
         $post->maincategory_id = 25;
@@ -749,8 +749,8 @@ return new class extends Migration
         $post->save();
 
         $post = new Post;
-        $post->post_name = 'negocio uno';
-        $post->url_name = 'negocio-uno';
+        $post->post_name = 'business one';
+        $post->url_name = 'business-one';
         $post->post_content = '<h1>Negocio de Ejemplo</h1><br><p>Detalla cada uno de los requisitos</p><br><p>Evita comunicarte en plataformas externas</p><br><p>Investiga la reputacion del cliente o freelance</p><br><p>Toma de ejemplos los tutoriales en youtube</p><br><p>Procura negociar con clientes o freelance que muestren una imagen real de su persona o de su marca</p><br><p>Solo califica cuando estes seguro y se pueden apelar luego de finalizadas</p>';
         $post->maincategory_id = 25;
         $post->type_id = 2;
@@ -762,8 +762,8 @@ return new class extends Migration
         $post->save();
 
         $post = new Post;
-        $post->post_name = 'negocio uno';
-        $post->url_name = 'negocio-uno';
+        $post->post_name = 'business one';
+        $post->url_name = 'business-one';
         $post->post_content = '<h1>Negocio de Ejemplo</h1><br><p>Detalla cada uno de los requisitos</p><br><p>Evita comunicarte en plataformas externas</p><br><p>Investiga la reputacion del cliente o freelance</p><br><p>Toma de ejemplos los tutoriales en youtube</p><br><p>Procura negociar con clientes o freelance que muestren una imagen real de su persona o de su marca</p><br><p>Solo califica cuando estes seguro y se pueden apelar luego de finalizadas</p>';
         //categoria ejemplo dominios
         $post->maincategory_id = 26;
@@ -778,8 +778,8 @@ return new class extends Migration
         $post->save();
 
         $post = new Post;
-        $post->post_name = 'negocio uno';
-        $post->url_name = 'negocio-uno';
+        $post->post_name = 'business one';
+        $post->url_name = 'business-one';
         $post->post_content = '<h1>Negocio de Ejemplo</h1><br><p>Detalla cada uno de los requisitos</p><br><p>Evita comunicarte en plataformas externas</p><br><p>Investiga la reputacion del cliente o freelance</p><br><p>Toma de ejemplos los tutoriales en youtube</p><br><p>Procura negociar con clientes o freelance que muestren una imagen real de su persona o de su marca</p><br><p>Solo califica cuando estes seguro y se pueden apelar luego de finalizadas</p>';
         $post->maincategory_id = 26;
         $post->type_id = 2;
@@ -791,8 +791,8 @@ return new class extends Migration
         $post->save();
 
         $post = new Post;
-        $post->post_name = 'negocio uno';
-        $post->url_name = 'negocio-uno';
+        $post->post_name = 'business one';
+        $post->url_name = 'business-one';
         $post->post_content = '<h1>Negocio de Ejemplo</h1><br><p>Detalla cada uno de los requisitos</p><br><p>Evita comunicarte en plataformas externas</p><br><p>Investiga la reputacion del cliente o freelance</p><br><p>Toma de ejemplos los tutoriales en youtube</p><br><p>Procura negociar con clientes o freelance que muestren una imagen real de su persona o de su marca</p><br><p>Solo califica cuando estes seguro y se pueden apelar luego de finalizadas</p>';
         //categoria ejemplo dominios
         $post->maincategory_id = 27;
@@ -807,8 +807,8 @@ return new class extends Migration
         $post->save();
 
         $post = new Post;
-        $post->post_name = 'negocio uno';
-        $post->url_name = 'negocio-uno';
+        $post->post_name = 'business one';
+        $post->url_name = 'business-one';
         $post->post_content = '<h1>Negocio de Ejemplo</h1><br><p>Detalla cada uno de los requisitos</p><br><p>Evita comunicarte en plataformas externas</p><br><p>Investiga la reputacion del cliente o freelance</p><br><p>Toma de ejemplos los tutoriales en youtube</p><br><p>Procura negociar con clientes o freelance que muestren una imagen real de su persona o de su marca</p><br><p>Solo califica cuando estes seguro y se pueden apelar luego de finalizadas</p>';
         $post->maincategory_id = 27;
         $post->type_id = 2;
@@ -820,8 +820,8 @@ return new class extends Migration
         $post->save();
 
         $post = new Post;
-        $post->post_name = 'negocio uno';
-        $post->url_name = 'negocio-uno';
+        $post->post_name = 'business one';
+        $post->url_name = 'business-one';
         $post->post_content = '<h1>Negocio de Ejemplo</h1><br><p>Detalla cada uno de los requisitos</p><br><p>Evita comunicarte en plataformas externas</p><br><p>Investiga la reputacion del cliente o freelance</p><br><p>Toma de ejemplos los tutoriales en youtube</p><br><p>Procura negociar con clientes o freelance que muestren una imagen real de su persona o de su marca</p><br><p>Solo califica cuando estes seguro y se pueden apelar luego de finalizadas</p>';
         //categoria ejemplo dominios
         $post->maincategory_id = 28;
@@ -836,8 +836,8 @@ return new class extends Migration
         $post->save();
 
         $post = new Post;
-        $post->post_name = 'negocio uno';
-        $post->url_name = 'negocio-uno';
+        $post->post_name = 'business one';
+        $post->url_name = 'business-one';
         $post->post_content = '<h1>Negocio de Ejemplo</h1><br><p>Detalla cada uno de los requisitos</p><br><p>Evita comunicarte en plataformas externas</p><br><p>Investiga la reputacion del cliente o freelance</p><br><p>Toma de ejemplos los tutoriales en youtube</p><br><p>Procura negociar con clientes o freelance que muestren una imagen real de su persona o de su marca</p><br><p>Solo califica cuando estes seguro y se pueden apelar luego de finalizadas</p>';
         $post->maincategory_id = 28;
         $post->type_id = 2;
@@ -849,8 +849,8 @@ return new class extends Migration
         $post->save();
 
         $post = new Post;
-        $post->post_name = 'negocio uno';
-        $post->url_name = 'negocio-uno';
+        $post->post_name = 'business one';
+        $post->url_name = 'business-one';
         $post->post_content = '<h1>Negocio de Ejemplo</h1><br><p>Detalla cada uno de los requisitos</p><br><p>Evita comunicarte en plataformas externas</p><br><p>Investiga la reputacion del cliente o freelance</p><br><p>Toma de ejemplos los tutoriales en youtube</p><br><p>Procura negociar con clientes o freelance que muestren una imagen real de su persona o de su marca</p><br><p>Solo califica cuando estes seguro y se pueden apelar luego de finalizadas</p>';
         //categoria ejemplo dominios
         $post->maincategory_id = 29;
@@ -865,8 +865,8 @@ return new class extends Migration
         $post->save();
 
         $post = new Post;
-        $post->post_name = 'negocio uno';
-        $post->url_name = 'negocio-uno';
+        $post->post_name = 'business one';
+        $post->url_name = 'business-one';
         $post->post_content = '<h1>Negocio de Ejemplo</h1><br><p>Detalla cada uno de los requisitos</p><br><p>Evita comunicarte en plataformas externas</p><br><p>Investiga la reputacion del cliente o freelance</p><br><p>Toma de ejemplos los tutoriales en youtube</p><br><p>Procura negociar con clientes o freelance que muestren una imagen real de su persona o de su marca</p><br><p>Solo califica cuando estes seguro y se pueden apelar luego de finalizadas</p>';
         $post->maincategory_id = 29;
         $post->type_id = 2;
@@ -878,8 +878,8 @@ return new class extends Migration
         $post->save();
 
         $post = new Post;
-        $post->post_name = 'negocio uno';
-        $post->url_name = 'negocio-uno';
+        $post->post_name = 'business one';
+        $post->url_name = 'business-one';
         $post->post_content = '<h1>Negocio de Ejemplo</h1><br><p>Detalla cada uno de los requisitos</p><br><p>Evita comunicarte en plataformas externas</p><br><p>Investiga la reputacion del cliente o freelance</p><br><p>Toma de ejemplos los tutoriales en youtube</p><br><p>Procura negociar con clientes o freelance que muestren una imagen real de su persona o de su marca</p><br><p>Solo califica cuando estes seguro y se pueden apelar luego de finalizadas</p>';
         //categoria ejemplo dominios
         $post->maincategory_id = 30;
@@ -894,8 +894,8 @@ return new class extends Migration
         $post->save();
 
         $post = new Post;
-        $post->post_name = 'negocio uno';
-        $post->url_name = 'negocio-uno';
+        $post->post_name = 'business one';
+        $post->url_name = 'business-one';
         $post->post_content = '<h1>Negocio de Ejemplo</h1><br><p>Detalla cada uno de los requisitos</p><br><p>Evita comunicarte en plataformas externas</p><br><p>Investiga la reputacion del cliente o freelance</p><br><p>Toma de ejemplos los tutoriales en youtube</p><br><p>Procura negociar con clientes o freelance que muestren una imagen real de su persona o de su marca</p><br><p>Solo califica cuando estes seguro y se pueden apelar luego de finalizadas</p>';
         $post->maincategory_id = 30;
         $post->type_id = 2;
@@ -907,8 +907,8 @@ return new class extends Migration
         $post->save();
 
         $post = new Post;
-        $post->post_name = 'negocio uno';
-        $post->url_name = 'negocio-uno';
+        $post->post_name = 'business one';
+        $post->url_name = 'business-one';
         $post->post_content = '<h1>Negocio de Ejemplo</h1><br><p>Detalla cada uno de los requisitos</p><br><p>Evita comunicarte en plataformas externas</p><br><p>Investiga la reputacion del cliente o freelance</p><br><p>Toma de ejemplos los tutoriales en youtube</p><br><p>Procura negociar con clientes o freelance que muestren una imagen real de su persona o de su marca</p><br><p>Solo califica cuando estes seguro y se pueden apelar luego de finalizadas</p>';
         //categoria ejemplo dominios
         $post->maincategory_id = 31;
@@ -923,8 +923,8 @@ return new class extends Migration
         $post->save();
 
         $post = new Post;
-        $post->post_name = 'negocio uno';
-        $post->url_name = 'negocio-uno';
+        $post->post_name = 'business one';
+        $post->url_name = 'business-one';
         $post->post_content = '<h1>Negocio de Ejemplo</h1><br><p>Detalla cada uno de los requisitos</p><br><p>Evita comunicarte en plataformas externas</p><br><p>Investiga la reputacion del cliente o freelance</p><br><p>Toma de ejemplos los tutoriales en youtube</p><br><p>Procura negociar con clientes o freelance que muestren una imagen real de su persona o de su marca</p><br><p>Solo califica cuando estes seguro y se pueden apelar luego de finalizadas</p>';
         $post->maincategory_id = 31;
         $post->type_id = 2;
@@ -936,8 +936,8 @@ return new class extends Migration
         $post->save();
 
         $post = new Post;
-        $post->post_name = 'negocio uno';
-        $post->url_name = 'negocio-uno';
+        $post->post_name = 'business one';
+        $post->url_name = 'business-one';
         $post->post_content = '<h1>Negocio de Ejemplo</h1><br><p>Detalla cada uno de los requisitos</p><br><p>Evita comunicarte en plataformas externas</p><br><p>Investiga la reputacion del cliente o freelance</p><br><p>Toma de ejemplos los tutoriales en youtube</p><br><p>Procura negociar con clientes o freelance que muestren una imagen real de su persona o de su marca</p><br><p>Solo califica cuando estes seguro y se pueden apelar luego de finalizadas</p>';
         //categoria ejemplo dominios
         $post->maincategory_id = 32;
@@ -952,8 +952,8 @@ return new class extends Migration
         $post->save();
 
         $post = new Post;
-        $post->post_name = 'negocio uno';
-        $post->url_name = 'negocio-uno';
+        $post->post_name = 'business one';
+        $post->url_name = 'business-one';
         $post->post_content = '<h1>Negocio de Ejemplo</h1><br><p>Detalla cada uno de los requisitos</p><br><p>Evita comunicarte en plataformas externas</p><br><p>Investiga la reputacion del cliente o freelance</p><br><p>Toma de ejemplos los tutoriales en youtube</p><br><p>Procura negociar con clientes o freelance que muestren una imagen real de su persona o de su marca</p><br><p>Solo califica cuando estes seguro y se pueden apelar luego de finalizadas</p>';
         $post->maincategory_id = 32;
         $post->type_id = 2;
@@ -965,8 +965,8 @@ return new class extends Migration
         $post->save();
 
         $post = new Post;
-        $post->post_name = 'negocio uno';
-        $post->url_name = 'negocio-uno';
+        $post->post_name = 'business one';
+        $post->url_name = 'business-one';
         $post->post_content = '<h1>Negocio de Ejemplo</h1><br><p>Detalla cada uno de los requisitos</p><br><p>Evita comunicarte en plataformas externas</p><br><p>Investiga la reputacion del cliente o freelance</p><br><p>Toma de ejemplos los tutoriales en youtube</p><br><p>Procura negociar con clientes o freelance que muestren una imagen real de su persona o de su marca</p><br><p>Solo califica cuando estes seguro y se pueden apelar luego de finalizadas</p>';
         //categoria ejemplo dominios
         $post->maincategory_id = 33;
@@ -981,8 +981,8 @@ return new class extends Migration
         $post->save();
 
         $post = new Post;
-        $post->post_name = 'negocio uno';
-        $post->url_name = 'negocio-uno';
+        $post->post_name = 'business one';
+        $post->url_name = 'business-one';
         $post->post_content = '<h1>Negocio de Ejemplo</h1><br><p>Detalla cada uno de los requisitos</p><br><p>Evita comunicarte en plataformas externas</p><br><p>Investiga la reputacion del cliente o freelance</p><br><p>Toma de ejemplos los tutoriales en youtube</p><br><p>Procura negociar con clientes o freelance que muestren una imagen real de su persona o de su marca</p><br><p>Solo califica cuando estes seguro y se pueden apelar luego de finalizadas</p>';
         $post->maincategory_id = 33;
         $post->type_id = 2;
@@ -994,8 +994,8 @@ return new class extends Migration
         $post->save();
 
         $post = new Post;
-        $post->post_name = 'negocio uno';
-        $post->url_name = 'negocio-uno';
+        $post->post_name = 'business one';
+        $post->url_name = 'business-one';
         $post->post_content = '<h1>Negocio de Ejemplo</h1><br><p>Detalla cada uno de los requisitos</p><br><p>Evita comunicarte en plataformas externas</p><br><p>Investiga la reputacion del cliente o freelance</p><br><p>Toma de ejemplos los tutoriales en youtube</p><br><p>Procura negociar con clientes o freelance que muestren una imagen real de su persona o de su marca</p><br><p>Solo califica cuando estes seguro y se pueden apelar luego de finalizadas</p>';
         //categoria ejemplo dominios
         $post->maincategory_id = 34;
@@ -1010,8 +1010,8 @@ return new class extends Migration
         $post->save();
 
         $post = new Post;
-        $post->post_name = 'negocio uno';
-        $post->url_name = 'negocio-uno';
+        $post->post_name = 'business one';
+        $post->url_name = 'business-one';
         $post->post_content = '<h1>Negocio de Ejemplo</h1><br><p>Detalla cada uno de los requisitos</p><br><p>Evita comunicarte en plataformas externas</p><br><p>Investiga la reputacion del cliente o freelance</p><br><p>Toma de ejemplos los tutoriales en youtube</p><br><p>Procura negociar con clientes o freelance que muestren una imagen real de su persona o de su marca</p><br><p>Solo califica cuando estes seguro y se pueden apelar luego de finalizadas</p>';
         $post->maincategory_id = 34;
         $post->type_id = 2;
@@ -1023,8 +1023,8 @@ return new class extends Migration
         $post->save();
 
         $post = new Post;
-        $post->post_name = 'negocio uno';
-        $post->url_name = 'negocio-uno';
+        $post->post_name = 'business one';
+        $post->url_name = 'business-one';
         $post->post_content = '<h1>Negocio de Ejemplo</h1><br><p>Detalla cada uno de los requisitos</p><br><p>Evita comunicarte en plataformas externas</p><br><p>Investiga la reputacion del cliente o freelance</p><br><p>Toma de ejemplos los tutoriales en youtube</p><br><p>Procura negociar con clientes o freelance que muestren una imagen real de su persona o de su marca</p><br><p>Solo califica cuando estes seguro y se pueden apelar luego de finalizadas</p>';
         //categoria ejemplo dominios
         $post->maincategory_id = 35;
@@ -1039,8 +1039,8 @@ return new class extends Migration
         $post->save();
 
         $post = new Post;
-        $post->post_name = 'negocio uno';
-        $post->url_name = 'negocio-uno';
+        $post->post_name = 'business one';
+        $post->url_name = 'business-one';
         $post->post_content = '<h1>Negocio de Ejemplo</h1><br><p>Detalla cada uno de los requisitos</p><br><p>Evita comunicarte en plataformas externas</p><br><p>Investiga la reputacion del cliente o freelance</p><br><p>Toma de ejemplos los tutoriales en youtube</p><br><p>Procura negociar con clientes o freelance que muestren una imagen real de su persona o de su marca</p><br><p>Solo califica cuando estes seguro y se pueden apelar luego de finalizadas</p>';
         $post->maincategory_id = 35;
         $post->type_id = 2;
@@ -1052,8 +1052,8 @@ return new class extends Migration
         $post->save();
 
         $post = new Post;
-        $post->post_name = 'negocio uno';
-        $post->url_name = 'negocio-uno';
+        $post->post_name = 'business one';
+        $post->url_name = 'business-one';
         $post->post_content = '<h1>Negocio de Ejemplo</h1><br><p>Detalla cada uno de los requisitos</p><br><p>Evita comunicarte en plataformas externas</p><br><p>Investiga la reputacion del cliente o freelance</p><br><p>Toma de ejemplos los tutoriales en youtube</p><br><p>Procura negociar con clientes o freelance que muestren una imagen real de su persona o de su marca</p><br><p>Solo califica cuando estes seguro y se pueden apelar luego de finalizadas</p>';
         //categoria ejemplo dominios
         $post->maincategory_id = 36;
@@ -1068,8 +1068,8 @@ return new class extends Migration
         $post->save();
 
         $post = new Post;
-        $post->post_name = 'negocio uno';
-        $post->url_name = 'negocio-uno';
+        $post->post_name = 'business one';
+        $post->url_name = 'business-one';
         $post->post_content = '<h1>Negocio de Ejemplo</h1><br><p>Detalla cada uno de los requisitos</p><br><p>Evita comunicarte en plataformas externas</p><br><p>Investiga la reputacion del cliente o freelance</p><br><p>Toma de ejemplos los tutoriales en youtube</p><br><p>Procura negociar con clientes o freelance que muestren una imagen real de su persona o de su marca</p><br><p>Solo califica cuando estes seguro y se pueden apelar luego de finalizadas</p>';
         $post->maincategory_id = 36;
         $post->type_id = 2;
@@ -1081,8 +1081,8 @@ return new class extends Migration
         $post->save();
 
         $post = new Post;
-        $post->post_name = 'negocio uno';
-        $post->url_name = 'negocio-uno';
+        $post->post_name = 'business one';
+        $post->url_name = 'business-one';
         $post->post_content = '<h1>Negocio de Ejemplo</h1><br><p>Detalla cada uno de los requisitos</p><br><p>Evita comunicarte en plataformas externas</p><br><p>Investiga la reputacion del cliente o freelance</p><br><p>Toma de ejemplos los tutoriales en youtube</p><br><p>Procura negociar con clientes o freelance que muestren una imagen real de su persona o de su marca</p><br><p>Solo califica cuando estes seguro y se pueden apelar luego de finalizadas</p>';
         //categoria ejemplo dominios
         $post->maincategory_id = 37;
@@ -1097,8 +1097,8 @@ return new class extends Migration
         $post->save();
 
         $post = new Post;
-        $post->post_name = 'negocio uno';
-        $post->url_name = 'negocio-uno';
+        $post->post_name = 'business one';
+        $post->url_name = 'business-one';
         $post->post_content = '<h1>Negocio de Ejemplo</h1><br><p>Detalla cada uno de los requisitos</p><br><p>Evita comunicarte en plataformas externas</p><br><p>Investiga la reputacion del cliente o freelance</p><br><p>Toma de ejemplos los tutoriales en youtube</p><br><p>Procura negociar con clientes o freelance que muestren una imagen real de su persona o de su marca</p><br><p>Solo califica cuando estes seguro y se pueden apelar luego de finalizadas</p>';
         $post->maincategory_id = 37;
         $post->type_id = 2;
@@ -1110,8 +1110,8 @@ return new class extends Migration
         $post->save();
 
         $post = new Post;
-        $post->post_name = 'negocio uno';
-        $post->url_name = 'negocio-uno';
+        $post->post_name = 'business one';
+        $post->url_name = 'business-one';
         $post->post_content = '<h1>Negocio de Ejemplo</h1><br><p>Detalla cada uno de los requisitos</p><br><p>Evita comunicarte en plataformas externas</p><br><p>Investiga la reputacion del cliente o freelance</p><br><p>Toma de ejemplos los tutoriales en youtube</p><br><p>Procura negociar con clientes o freelance que muestren una imagen real de su persona o de su marca</p><br><p>Solo califica cuando estes seguro y se pueden apelar luego de finalizadas</p>';
         //categoria ejemplo dominios
         $post->maincategory_id = 38;
@@ -1126,8 +1126,8 @@ return new class extends Migration
         $post->save();
 
         $post = new Post;
-        $post->post_name = 'negocio uno';
-        $post->url_name = 'negocio-uno';
+        $post->post_name = 'business one';
+        $post->url_name = 'business-one';
         $post->post_content = '<h1>Negocio de Ejemplo</h1><br><p>Detalla cada uno de los requisitos</p><br><p>Evita comunicarte en plataformas externas</p><br><p>Investiga la reputacion del cliente o freelance</p><br><p>Toma de ejemplos los tutoriales en youtube</p><br><p>Procura negociar con clientes o freelance que muestren una imagen real de su persona o de su marca</p><br><p>Solo califica cuando estes seguro y se pueden apelar luego de finalizadas</p>';
         $post->maincategory_id = 38;
         $post->type_id = 2;
@@ -1139,8 +1139,8 @@ return new class extends Migration
         $post->save();
 
         $post = new Post;
-        $post->post_name = 'negocio uno';
-        $post->url_name = 'negocio-uno';
+        $post->post_name = 'business one';
+        $post->url_name = 'business-one';
         $post->post_content = '<h1>Negocio de Ejemplo</h1><br><p>Detalla cada uno de los requisitos</p><br><p>Evita comunicarte en plataformas externas</p><br><p>Investiga la reputacion del cliente o freelance</p><br><p>Toma de ejemplos los tutoriales en youtube</p><br><p>Procura negociar con clientes o freelance que muestren una imagen real de su persona o de su marca</p><br><p>Solo califica cuando estes seguro y se pueden apelar luego de finalizadas</p>';
         //categoria ejemplo dominios
         $post->maincategory_id = 39;
@@ -1155,8 +1155,8 @@ return new class extends Migration
         $post->save();
 
         $post = new Post;
-        $post->post_name = 'negocio uno';
-        $post->url_name = 'negocio-uno';
+        $post->post_name = 'business one';
+        $post->url_name = 'business-one';
         $post->post_content = '<h1>Negocio de Ejemplo</h1><br><p>Detalla cada uno de los requisitos</p><br><p>Evita comunicarte en plataformas externas</p><br><p>Investiga la reputacion del cliente o freelance</p><br><p>Toma de ejemplos los tutoriales en youtube</p><br><p>Procura negociar con clientes o freelance que muestren una imagen real de su persona o de su marca</p><br><p>Solo califica cuando estes seguro y se pueden apelar luego de finalizadas</p>';
         $post->maincategory_id = 39;
         $post->type_id = 2;
@@ -1168,8 +1168,8 @@ return new class extends Migration
         $post->save();
 
         $post = new Post;
-        $post->post_name = 'negocio uno';
-        $post->url_name = 'negocio-uno';
+        $post->post_name = 'business one';
+        $post->url_name = 'business-one';
         $post->post_content = '<h1>Negocio de Ejemplo</h1><br><p>Detalla cada uno de los requisitos</p><br><p>Evita comunicarte en plataformas externas</p><br><p>Investiga la reputacion del cliente o freelance</p><br><p>Toma de ejemplos los tutoriales en youtube</p><br><p>Procura negociar con clientes o freelance que muestren una imagen real de su persona o de su marca</p><br><p>Solo califica cuando estes seguro y se pueden apelar luego de finalizadas</p>';
         //categoria ejemplo dominios
         $post->maincategory_id = 40;
@@ -1184,8 +1184,8 @@ return new class extends Migration
         $post->save();
 
         $post = new Post;
-        $post->post_name = 'negocio uno';
-        $post->url_name = 'negocio-uno';
+        $post->post_name = 'business one';
+        $post->url_name = 'business-one';
         $post->post_content = '<h1>Negocio de Ejemplo</h1><br><p>Detalla cada uno de los requisitos</p><br><p>Evita comunicarte en plataformas externas</p><br><p>Investiga la reputacion del cliente o freelance</p><br><p>Toma de ejemplos los tutoriales en youtube</p><br><p>Procura negociar con clientes o freelance que muestren una imagen real de su persona o de su marca</p><br><p>Solo califica cuando estes seguro y se pueden apelar luego de finalizadas</p>';
         $post->maincategory_id = 40;
         $post->type_id = 2;

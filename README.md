@@ -83,7 +83,10 @@ $ php artisan serve
 _Admin: admin@gmail.com
 _Pass: Test1234
 
-_User: user@gmail.com
+_User: free@gmail.com
+_Pass: Test1234
+
+_User: vip@gmail.com
 _Pass: Test1234
 
 ## Technologies 🛠️
@@ -94,7 +97,7 @@ _Pass: Test1234
 
 ## Author ✒️
 
-* **Jonathan Castro** - *Software Engineer PHP Laravel* - [joncastdev](https://github.com/joncastdev)
+* **Jonathan Castro** - *Software Engineer* - [joncastdev](https://github.com/joncastdev)
 
 
 ## Support
