@@ -9,12 +9,13 @@ use Illuminate\Support\Facades\Auth;
 
 use App\Repository\Post\PostRepository;
 use App\Repository\PostFree\PostFreeRepository;
-use App\Repository\Category\CategoryRepository;    
+use App\Repository\Category\CategoryRepository;
+use App\Repository\Category\MessageRepository;        
 
 use App\Models\User;
 // use App\Models\Category;
 use App\Models\Post;
-use App\Models\Message;
+// use App\Models\Message;
 use App\Models\Country;
 use App\Models\PostFree;
 use App\Models\StatisticsSearch;
@@ -33,13 +34,15 @@ class HomeController extends Controller
  // protected $categorys;
 
 
- public function __construct(PostRepository $post, PostFreeRepository $postfree,CategoryRepository $category){
+ public function __construct(PostRepository $post, PostFreeRepository $postfree,CategoryRepository $category,MessageRepository $message){
 
   $this->post = $post;
 
   $this->postfree = $postfree;
 
   $this->category = $category;
+
+  $this->message = $message;
 
 
 }
@@ -51,7 +54,7 @@ class HomeController extends Controller
     public function index()
     {
 
-      return redirect('https://www.youtube.com/watch?v=NrvRXrSo-yo');
+      // return redirect('https://www.youtube.com/watch?v=NrvRXrSo-yo');
 
 
       $categorylastnegocios = $this->post->getAllPosts(1);
@@ -74,93 +77,24 @@ class HomeController extends Controller
 
       $categorylastcom =  $this->postfree->getLastPosts(3);    
       
-        
+
 
       if (Auth::user()) {
 
         $id_user = Auth::user()->id;
 
- // $messages = Message::select('messages.message','messages.id','mp.user_id_message','u.username','p.post_name','mp.message_id')
+        $replys =  $this->message->getAllReplysMessages($id_user);
 
-        $replys = Message::select('messages.message','messages.id','u.username','u.img','r.reply','p.post_name','mp.user_id_message','mp.message_id','mp.user_id')
-        ->join('replys as r', 'messages.id', '=', 'r.message_id')
-        ->join('messages_posts as mp', 'mp.message_id', '=', 'messages.id')
-      // ->join('users as u', 'u.id', '=', 'mp.user_id')
-        ->join('posts as p', 'p.id', '=', 'mp.post_id')
-        ->join('users as u', 'u.id', '=', 'r.user_id')
-      // ->where('u.id', $id_user)
-        // ->where('r.user_id', $id_user)
-        ->where('mp.user_id_message', $id_user)
-        ->orderBy('r.created_at', 'desc')
-        ->get();
+        $replysnavbar =  $this->message->getLimitReplysMessages($id_user);
 
-      // dd($replys);
-      // exit;
+        $replysall =  $this->message->getAllReplys($id_user); 
 
-      // $replys = Message::select('u.id as userid', 'u.username','u.img','r.reply')        
-     // ->join('replys as r', 'messages.id', '=', 'r.message_id')
-     // ->join('users as u', 'u.id', '=', 'r.user_id')
-     // // ->join('ranks as r', 'u.rank_id', '=', 'r.id')       
-     // // ->where('posts.id', $postid)
-     // // ->where('r.message_id', 1)
-     // ->where('r.message_id', $message_id)
-     //    // ->where('u.user_id', $postid)
-     // // ->where('mc.id', 8)
-     //    // ->orderBy('posts.id', 'asc')
-     // // ->first();
-     // // ->first();
-     // ->get();
-
-      // ->orWhere('campoA','=','2')
-
-        $replysnavbar = Message::select('r.reply')
-        ->join('replys as r', 'messages.id', '=', 'r.message_id')
-        ->join('messages_posts as mp', 'mp.message_id', '=', 'messages.id')    
-        ->join('posts as p', 'p.id', '=', 'mp.post_id')
-        ->join('users as u', 'u.id', '=', 'r.user_id')   
-        ->where('mp.user_id_message', $id_user)  
-      // ->where('u.id', $id_user)
-        ->orWhere('mp.user_id','=',$id_user)
-        ->orderBy('r.created_at', 'desc')
-        ->limit(4)
-        ->get();
-
-      // dd($replysnavbar);
-
-      // exit;
-        $replysall = Message::select('r.reply')
-      // ->join('messages_posts as mp', 'mp.message_id', '=', 'messages.id')
-      // ->join('users as u', 'u.id', '=', 'mp.user_id')
-      // ->join('posts as p', 'p.id', '=', 'mp.post_id')
-      // ->where('u.id', $id_user)
-        ->join('replys as r', 'messages.id', '=', 'r.message_id')
-        ->join('messages_posts as mp', 'mp.message_id', '=', 'messages.id')    
-        ->join('posts as p', 'p.id', '=', 'mp.post_id')
-        ->join('users as u', 'u.id', '=', 'r.user_id')   
-        ->where('mp.user_id_message', $id_user) 
-      // ->where('messages.read', 0)
-        ->orWhere('mp.user_id','=',$id_user)         
-        ->get();
+        $messagesnavbar =  $this->message->getLimitMessages($id_user);     
 
 
         $sumreplys = count($replysall);
 
-      // dd($sumreplys);
-
-      // exit;
-
-      // area mensajes 
-
-
-        $messagesnavbar = Message::select('messages.message')
-        ->join('messages_posts as mp', 'mp.message_id', '=', 'messages.id')
-        ->join('users as u', 'u.id', '=', 'mp.user_id')
-        ->join('posts as p', 'p.id', '=', 'mp.post_id')
-        ->where('u.id', $id_user)
-        ->where('mp.is_ignored', 0)
-        ->orderBy('messages.created_at', 'desc')
-        ->limit(4)
-        ->get();
+     
 
         $messages = Message::select('messages.message','messages.id','mp.user_id_message','u.username','p.post_name','u.img','mp.user_id')
         ->join('messages_posts as mp', 'mp.message_id', '=', 'messages.id')
