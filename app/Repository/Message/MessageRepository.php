@@ -91,6 +91,30 @@ class MessageRepository implements MessageInterface
         ->get();
     }
 
+      public function getAllMessagesByUser($id_user)
+    {
+        return $this->message->select('messages.message','messages.id','mp.user_id_message','u.username','p.post_name','u.img','mp.user_id')
+        ->join('messages_posts as mp', 'mp.message_id', '=', 'messages.id')
+        ->join('users as u', 'u.id', '=', 'mp.user_id')
+        ->join('posts as p', 'p.id', '=', 'mp.post_id')
+        ->where('u.id', $id_user)
+        ->where('mp.is_ignored', 0)
+        ->orderBy('messages.created_at', 'desc')
+        ->get();
+    }
+
+       public function getAllMessages($id_user)
+    {
+        return $this->message->select('messages.message')
+        ->join('messages_posts as mp', 'mp.message_id', '=', 'messages.id')
+        ->join('users as u', 'u.id', '=', 'mp.user_id')
+        ->join('posts as p', 'p.id', '=', 'mp.post_id')
+        ->where('u.id', $id_user)
+        ->where('mp.is_ignored', 0)
+        ->where('messages.read', 0)         
+        ->get();
+    }
+
     //  public function getLastPosts($options)
     // {
     //     return $this->post->select('posts.post_name','posts.url_name','mc.maincategory_name','u.id', 'u.username','posts.updated_at','posts.id as postid','mc.id as maincategory_id')    

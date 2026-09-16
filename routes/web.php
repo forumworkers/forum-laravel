@@ -41,12 +41,6 @@ Route::get('/', [HomeController::class, 'index']);
 
 Route::get('/home', [HomeController::class, 'index'])->name('home');
 
-Route::get('/cursos', [HomeController::class, 'courses'])->name('courses');
-
-Route::get('/cursos/{cursoname}', [HomeController::class, 'coursesall'])->name('cursosall');
-
-Route::get('/curso/{cursoname}/{pensunname}', [HomeController::class, 'coursespensum'])->name('cursospensum');
-
 // compras backlinks
 Route::get('/complete', [SubCategoryFreeController::class, 'complete'])->name('complete');
 
