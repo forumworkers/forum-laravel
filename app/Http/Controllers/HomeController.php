@@ -10,17 +10,15 @@ use Illuminate\Support\Facades\Auth;
 use App\Repository\Post\PostRepository;
 use App\Repository\PostFree\PostFreeRepository;
 use App\Repository\Category\CategoryRepository;
-use App\Repository\Category\MessageRepository;        
+use App\Repository\Message\MessageRepository;        
 
 use App\Models\User;
-// use App\Models\Category;
-use App\Models\Post;
-// use App\Models\Message;
+
 use App\Models\Country;
-use App\Models\PostFree;
+
 use App\Models\StatisticsSearch;
 
-use App\Models\Course;
+
 
 
 
@@ -34,7 +32,7 @@ class HomeController extends Controller
  // protected $categorys;
 
 
- public function __construct(PostRepository $post, PostFreeRepository $postfree,CategoryRepository $category,MessageRepository $message){
+ public function __construct(PostRepository $post, PostFreeRepository $postfree,CategoryRepository $category, MessageRepository $message){
 
   $this->post = $post;
 
@@ -94,109 +92,17 @@ class HomeController extends Controller
 
         $sumreplys = count($replysall);
 
-     
+        $messages =  $this->message->getAllMessagesByUser($id_user);
 
-        $messages = Message::select('messages.message','messages.id','mp.user_id_message','u.username','p.post_name','u.img','mp.user_id')
-        ->join('messages_posts as mp', 'mp.message_id', '=', 'messages.id')
-        ->join('users as u', 'u.id', '=', 'mp.user_id')
-        ->join('posts as p', 'p.id', '=', 'mp.post_id')
-        ->where('u.id', $id_user)
-        ->where('mp.is_ignored', 0)
-        ->orderBy('messages.created_at', 'desc')
-        ->get();
-
-     // dd($messages[0]['user_id_message']);
-
-     // exit;
-
-
-        $mmessagesall = Message::select('messages.message')
-        ->join('messages_posts as mp', 'mp.message_id', '=', 'messages.id')
-        ->join('users as u', 'u.id', '=', 'mp.user_id')
-        ->join('posts as p', 'p.id', '=', 'mp.post_id')
-        ->where('u.id', $id_user)
-        ->where('mp.is_ignored', 0)
-        ->where('messages.read', 0)         
-        ->get();
+        $mmessagesall =  $this->message->getAllMessages($id_user);
 
 
         $summessages = count($mmessagesall);
 
 
-       // $id_user = Auth::user()->id;
-
-       // $messagesnavbar = Message::select('messages.message')
-       // ->join('messages_posts as mp', 'mp.message_id', '=', 'messages.id')
-       // ->join('users as u', 'u.id', '=', 'mp.user_id')
-       // ->join('posts as p', 'p.id', '=', 'mp.post_id')
-       // ->where('u.id', $id_user)
-       // ->orderBy('messages.created_at', 'desc')
-       // ->limit(4)
-       // ->get();
-
-       // $mmessages = Message::select('messages.message')
-       // ->join('messages_posts as mp', 'mp.message_id', '=', 'messages.id')
-       // ->join('users as u', 'u.id', '=', 'mp.user_id')
-       // ->join('posts as p', 'p.id', '=', 'mp.post_id')
-       // ->where('u.id', $id_user)
-       // ->where('messages.read', 0)         
-       // ->get();
-
-
-       // $summessages = count($mmessages);
-
-       // comentarios
-     // $comments = Post::select('posts.post_name','posts.url_name','posts.id as postid','posts.post_content','u.id as userid', 'u.username','u.img','c.comment')
-     // $replys = Message::select('u.id as userid', 'u.username','u.img','r.reply')        
-     // ->join('replys as r', 'messages.id', '=', 'r.message_id')
-     // ->join('users as u', 'u.id', '=', 'r.user_id')
-     // // ->join('ranks as r', 'u.rank_id', '=', 'r.id')       
-     // // ->where('posts.id', $postid)
-     // // ->where('r.message_id', 1)
-     // ->where('r.message_id', $message_id)
-     //    // ->where('u.user_id', $postid)
-     // // ->where('mc.id', 8)
-     //    // ->orderBy('posts.id', 'asc')
-     // // ->first();
-     // // ->first();
-     // ->get();
-
-     // // dd($replys);
-
-     // // exit;
-
-     // // dd($postid);
-
-     // $replysnavbar = Message::select('r.reply')
-     // ->join('replys as r', 'messages.id', '=', 'r.message_id')
-     // ->join('messages_posts as mp', 'mp.message_id', '=', 'messages.id')    
-     // ->join('posts as p', 'p.id', '=', 'mp.post_id')
-     // ->join('users as u', 'u.id', '=', 'r.user_id')   
-     // ->where('mp.user_id_message', $id_user)  
-     //  // ->where('u.id', $id_user)
-     // ->orWhere('mp.user_id','=',$id_user)
-     // ->orderBy('r.created_at', 'desc')
-     // ->limit(4)
-     // ->get();
-
-     // $replysall = Message::select('r.reply')  
-     // ->join('replys as r', 'messages.id', '=', 'r.message_id')
-     // ->join('messages_posts as mp', 'mp.message_id', '=', 'messages.id')    
-     // ->join('posts as p', 'p.id', '=', 'mp.post_id')
-     // ->join('users as u', 'u.id', '=', 'r.user_id')   
-     // ->where('mp.user_id_message', $id_user) 
-     //  // ->where('messages.read', 0)
-     // ->orWhere('mp.user_id','=',$id_user)         
-     // ->get();
-
-
-     // $sumreplys = count($replysall);
-
-
         return view('home', [
           'categorylastnegocios' =>  $categorylastnegocios,
-          'categorylastservicios' =>   $categorylastservicios,              
-        // 'categorys' => $array,
+          'categorylastservicios' =>   $categorylastservicios,
           'categorys' => $category,
           'categoryslast' =>  $categorylast,
           'categoryslastser' =>  $categorylastser,
@@ -208,10 +114,7 @@ class HomeController extends Controller
           'sumreplys' => $sumreplys,
           'categorys2' => $category2,
           'categoryslastcom' =>  $categorylastcom,
-          'tablelast' =>  $tablelast 
-
-
-      // 'subcategorys' => $subcategory,
+          'tablelast' =>  $tablelast     
         ]);
 
       } else {
@@ -219,27 +122,15 @@ class HomeController extends Controller
        return view('home', [
         'categorylastnegocios' =>  $categorylastnegocios,
         'categorylastservicios' =>   $categorylastservicios,     
-        // 'categorys' => $array,
         'categorys' => $category,
         'categoryslast' =>  $categorylast,
         'categoryslastser' =>  $categorylastser,
         'categorys1' => $category1,
         'categorys2' => $category2,
         'categoryslastcom' =>  $categorylastcom,
-        'tablelast' =>  $tablelast       
-      // 'subcategorys' => $subcategory,
+        'tablelast' =>  $tablelast    
       ]);
-     }   
-
-
-    //  return view('home', [
-    //     // 'categorys' => $array,
-    //   'categorys' => $category,
-    //   'categoryslast' =>  $categorylast,
-    //   'categorys1' => $category1,
-    //   'messagesnavbar' => $messagesnavbar
-    //   // 'subcategorys' => $subcategory,
-    // ]);
+     } 
    }
 
    public function rules()
@@ -249,19 +140,6 @@ class HomeController extends Controller
 
   }
 
-
-
-
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
-    public function courses()
-    {
-     return view('courses');
-   }
 
    public function contact()
    {
