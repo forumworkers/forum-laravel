@@ -103,7 +103,7 @@ class MessageRepository implements MessageInterface
         ->get();
     }
 
-       public function getAllMessages($id_user)
+    public function getAllMessages($id_user)
     {
         return $this->message->select('messages.message')
         ->join('messages_posts as mp', 'mp.message_id', '=', 'messages.id')
@@ -115,16 +115,5 @@ class MessageRepository implements MessageInterface
         ->get();
     }
 
-    //  public function getLastPosts($options)
-    // {
-    //     return $this->post->select('posts.post_name','posts.url_name','mc.maincategory_name','u.id', 'u.username','posts.updated_at','posts.id as postid','mc.id as maincategory_id')    
-    //   ->join('maincategorys as mc', 'mc.id', '=', 'posts.maincategory_id')   
-    //   ->join('users_posts as up', 'up.post_id', '=', 'posts.id')
-    //   ->join('users as u', 'u.id', '=', 'up.user_id')   
-    //   ->where('mc.subcategory_id', $options)
-    //   ->where('posts.publish', null)    
-    //   ->orderBy('posts.updated_at', 'desc')   
-    //   ->first();
-    //  // ->get();
-    // }
+   
 }

@@ -3,7 +3,7 @@
 Laravel open source forum to manage online communities.
 
 ## About
-A powerful Open Source Business Forum that can be installed on your server.Open source Laravel Forum
+A powerful Open Source Business Forum that can be installed on your server.Open source Laravel Forum, check [Wiki](https://github.com/forumworkers/forum-laravel/wiki)
 
 - Follow the creator Jonathan Castro:
     - YouTube: **[youtube.com/@joncastdev](https://youtube.com/@joncastdev)** — Videos every week

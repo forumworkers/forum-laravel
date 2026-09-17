@@ -15,4 +15,9 @@ interface MessageInterface
     public function getAllReplys($id_user);
 
     public function getLimitMessages($id_user);
+
+    public function  getAllMessagesByUser($id_user);
+
+    public function  getAllMessages($id_user);
+
 }

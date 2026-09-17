@@ -4,23 +4,12 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-// usar clase
 use Illuminate\Support\Facades\Auth;
 
 use App\Repository\Post\PostRepository;
 use App\Repository\PostFree\PostFreeRepository;
 use App\Repository\Category\CategoryRepository;
 use App\Repository\Message\MessageRepository;        
-
-use App\Models\User;
-
-use App\Models\Country;
-
-use App\Models\StatisticsSearch;
-
-
-
-
 
 use Illuminate\Support\Facades\DB;
 
@@ -141,306 +130,107 @@ class HomeController extends Controller
   }
 
 
-   public function contact()
-   {
-     return view('contact');
-   }
+  public function contact()
+  {
+   return view('contact');
+ }
 
-   public function about()
-   {
-     return view('about');
-   }
+ public function about()
+ {
+   return view('about');
+ }
 
-   public function priva()
-   {
-     return view('priva');
-   }
+ public function priva()
+ {
+   return view('priva');
+ }
 
-   public function guestpost()
-   {
-     return view('guestpost');
-   }
+ public function guestpost()
+ {
+   return view('guestpost');
+ } 
 
-   public function mapall()
-   {
+ public function findPost(Request $request)
+ {
 
-
-    // $usermap = User::select('c.country_name, c.lat, c.long')
-    // ->join('countrys as c', 'c.id', '=', 'users.country_id')           
-    // ->get();
-
-    // $usermap = User::select('*')
-     // $usermap = User::select('countrys.country_name as countryname, countrys.lat as latitude, countrys.long as longitude')
-     // $usermap = Country::select('countrys.country_name, countrys.latitude, countrys.longitude')
-     // // ->join('countrys', 'countrys.id', '=', 'users.country_id')
-     // ->join('users', 'countrys.id', '=', 'users.country_id')             
-     // ->get();
-
-    // tube que hacer join de esta manera tiene problema con latitude y longitude
-     $usermap = DB::table('countrys as c')
-     // ->leftJoin('users as u', 'u.country_id', '=', 'c.id')
-     // ->select('u.username, c.country_name')
-     // ->where('p.id', $id)        
-     ->get();
-     // ->first();
-
-     // dd($usermap);
-
-     // exit;
-
-     return response()->json($usermap);
-
-    // return response()->json("ok");
-
-   }
-
-   public function findPost(Request $request)
-   {
-
-     $findpost = Post::select('posts.post_name','posts.url_name','posts.id as postid','mc.maincategory_name','mc.subcategory_id','u.id as userid', 'u.username','u.img','mc.id','mc.maincategory_url','t.type_name','posts.created_at','posts.updated_at','t.type_color','posts.views')    
-     ->join('maincategorys as mc', 'mc.id', '=', 'posts.maincategory_id')
-     ->join('types as t', 't.id', '=', 'posts.type_id')
+   $findpost = Post::select('posts.post_name','posts.url_name','posts.id as postid','mc.maincategory_name','mc.subcategory_id','u.id as userid', 'u.username','u.img','mc.id','mc.maincategory_url','t.type_name','posts.created_at','posts.updated_at','t.type_color','posts.views')    
+   ->join('maincategorys as mc', 'mc.id', '=', 'posts.maincategory_id')
+   ->join('types as t', 't.id', '=', 'posts.type_id')
      // ->join('users_posts as up', 'up.maincategory_id', '=', 'posts.maincategory_id')
-     ->join('users_posts as up', 'up.post_id', '=', 'posts.id')
-     ->join('users as u', 'u.id', '=', 'up.user_id')
+   ->join('users_posts as up', 'up.post_id', '=', 'posts.id')
+   ->join('users as u', 'u.id', '=', 'up.user_id')
      // ->join('subcategorys as sc', 'sc.category_id', '=', 'categorys.id')
      // ->join('maincategorys', 'mc.subcategory_id', '=', 'sc.id')
       // ->where('mc.maincategory_url', $subcategory)
       // ->where('posts.post_name','like','%'.'negocio'.'%')
-     ->where('posts.post_name','like','%'.$request->post.'%')      
+   ->where('posts.post_name','like','%'.$request->post.'%')      
       // ->where('u.is_buyer', 1)
-     ->where('posts.site_id', 1)
+   ->where('posts.site_id', 1)
       // ->orWhere('posts.site_id', 2)
-     ->where('posts.publish', null)
+   ->where('posts.publish', null)
      // ->where('mc.id', 8)
       // ->orderBy('mc.id', 'asc')
       // ->orderBy('posts.created_at', 'desc')
-     ->orderBy('posts.updated_at', 'desc')
-     ->limit(10)     
+   ->orderBy('posts.updated_at', 'desc')
+   ->limit(10)     
      // ->first();
-     ->get();
+   ->get();
       // ->paginate(10);
 
 
-     $findpostfree = PostFree::select('posts_free.post_name','posts_free.url_name','posts_free.id as postid','mc.maincategory_name','mc.subcategory_id','u.id as userid', 'u.username','u.img','mc.id','mc.maincategory_url','posts_free.created_at','posts_free.updated_at','posts_free.views')    
-     ->join('maincategorys as mc', 'mc.id', '=', 'posts_free.maincategory_id')
+   $findpostfree = PostFree::select('posts_free.post_name','posts_free.url_name','posts_free.id as postid','mc.maincategory_name','mc.subcategory_id','u.id as userid', 'u.username','u.img','mc.id','mc.maincategory_url','posts_free.created_at','posts_free.updated_at','posts_free.views')    
+   ->join('maincategorys as mc', 'mc.id', '=', 'posts_free.maincategory_id')
       // ->join('types as t', 't.id', '=', 'posts.type_id')
      // ->join('users_posts as up', 'up.maincategory_id', '=', 'posts.maincategory_id')
-     ->join('users_posts_free as up', 'up.post_id', '=', 'posts_free.id')
+   ->join('users_posts_free as up', 'up.post_id', '=', 'posts_free.id')
       // ->join('users_posts as up', 'up.maincategory_id', '=', 'posts_free.maincategory_id')
-     ->join('users as u', 'u.id', '=', 'up.user_id')
+   ->join('users as u', 'u.id', '=', 'up.user_id')
      // ->join('subcategorys as sc', 'sc.category_id', '=', 'categorys.id')
      // ->join('maincategorys', 'mc.subcategory_id', '=', 'sc.id')
-     ->where('posts_free.post_name','like','%'.$request->post.'%')  
+   ->where('posts_free.post_name','like','%'.$request->post.'%')  
       // ->where('mc.maincategory_url', $subcategory)
        // ->where('mc.id', 41)
       // ->where('u.is_buyer', 1)
       // ->where('posts.site_id', 1)
-     ->where('posts_free.publish', null)
+   ->where('posts_free.publish', null)
       // asi es mejorar pero cambiaria las url amigables
        // ->where('up.maincategory_id', 42)
      // ->where('mc.id', 8)
       // ->orderBy('mc.id', 'asc')
       // ->orderBy('posts.created_at', 'desc')
-     ->orderBy('posts_free.updated_at', 'desc')
-     ->limit(10)       
+   ->orderBy('posts_free.updated_at', 'desc')
+   ->limit(10)       
      // ->first();
-     ->get();
+   ->get();
       // ->paginate(10);
 
      // return response()->json($findpost);
 
       // return response()->json($findpostfree);
 
-     
+   
 
 
-     if (!empty($request->post)) {
+   if (!empty($request->post)) {
 
-      $search = new StatisticsSearch;
+    $search = new StatisticsSearch;
 
-      $search->keyword = $request->post;            
+    $search->keyword = $request->post;            
 
-      $search->save();
+    $search->save();
 
-    }
+  }
 
-    return response()->json(
-      [
-       'findpost' => $findpost,
-       'findpostfree' => $findpostfree
-     ]
-   );
+  return response()->json(
+    [
+     'findpost' => $findpost,
+     'findpostfree' => $findpostfree
+   ]
+ );
 
     // return response()->json("ok");
 
-  }
-
-  public function coursesall($coursename)
-  {
-
-    $apikey = 'AIzaSyCP7XXInsH6pmnrzhRCvucYueyc0XK4WPE';
-
-    // $channelid = 'UCD1hK8-EgAnYA7oz4ggPTzg';
-
-    $channelid = 'UCD1hK8-EgAnYA7oz4ggPTzg';
-
-    $laravideo = 'X8bTrd0wgOo';
-
-    //playlist de laravel por id
-    $playlist = 'PLY0UhHKyZBT2y_Vejvf-Jihkm5AN4OgZw';
-
-    // $playlist = 'PLY0UhHKyZBT0YdFNGFHejG9850rl-pd_1';
-
-        // $endpoint = "https://api.tibiadata.com/v4/character/".'Issuex';
-
-    // $endpoint = "https://www.googleapis.com/youtube/v3/videos?channelId={$channelid}&key={$apikey}";
-
-     // $endpoint = "https://www.googleapis.com/youtube/v3/search?channelId={$channelid}&key={$apikey}";
-
-      // mejor ejemplo
-    // $endpoint = 'https://www.googleapis.com/youtube/v3/videos?id='.$channelid.'&key='.$apikey.'&part=snippet';
-
-     // $endpoint = 'https://www.googleapis.com/youtube/v3/videos?id='.$channelid.'&key='.$apikey.'&part=snippet&channelId'.$channelid;
-
-    //funciona video por id
-    $endpoint = 'https://www.googleapis.com/youtube/v3/videos?'.'part=snippet&id='.$laravideo.'&key='.$apikey;
-
-      //tratar de obtener todos los videos
-      // $endpoint = 'https://www.googleapis.com/youtube/v3/videos?'.'part=snippet'.'&key='.$apikey;
-
-      //playlist cuando pones id y cannel id es imcompatibles
-      // $endpoint = 'https://www.googleapis.com/youtube/v3/playlists?'.'part=snippet&id='.$playlist.'&channelId='.$channelid.'&key='.$apikey;
-
-       //playlist funciona, pero no devuelve los videos
-       // $endpoint = 'https://www.googleapis.com/youtube/v3/playlists?'.'part=snippet&id='.$playlist.'&key='.$apikey;
+}
 
 
-
-
-     // https://www.googleapis.com/youtube/v3/videos?part=snippet&id=xE_rMj35BIM&key=YOUR_KEY
-
-    //funciona pero muestra videos de todo el mundo
-    // $endpoint = 'https://www.googleapis.com/youtube/v3/search?id='.$channelid.'&key='.$apikey.'&part=snippet';
-
-
-    //channelId se pode en snippet para filtrar por canal 
-    // $endpoint = 'https://www.googleapis.com/youtube/v3/search?key='.$apikey.'&part=snippet&channelId'.$channelid;
-
-
-
-      // $endpoint = 'https://www.googleapis.com/youtube/v3/videos?id={$channelid}&key={$apikey}&part=snippet';
-
-
-
-    // $endpoint = "https://api.tibiadata.com/v4/character/".$player1->player_name;
-
-    $client = new \GuzzleHttp\Client(); 
-
-    $response = $client->request('GET', $endpoint);
-
-
-    // json decode convirete json a objeto
-    $contents = json_decode($response->getBody()->getContents());
-
-    // foreach ($contents  as $data) {
-
-    //   print_r($data->id);
-
-    //   exit;
-
-    // }
-
-    // return response()->json($contents);
-
-
-
-    $course = Course::select('courses.id','courses.course_url','courses.course_name','pensums.pensum_name','pensums.pensum_video','pensums.id as pensum_id','courses.course_img','courses.course_icon','courses.course_body','courses.course_content')
-    ->join('pensums', 'pensums.course_id', '=', 'courses.id')
-    ->join('users_califications_courses', 'users_califications_courses.course_id', '=', 'courses.id')
-    // ->join('contents as cont', 'cont.id', '=', 'posts_free.content_id')   
-    ->where('courses.course_url', $coursename)    
-    ->firstOrFail();
-
-    $pensum = Course::select('courses.id','courses.course_url','courses.course_name','pensums.pensum_name','pensums.pensum_url','pensums.pensum_video','pensums.id as pensum_id','courses.course_img','courses.course_icon','courses.course_body')
-    ->join('pensums', 'pensums.course_id', '=', 'courses.id')
-    ->join('users_califications_courses', 'users_califications_courses.course_id', '=', 'courses.id')
-    // ->join('contents as cont', 'cont.id', '=', 'posts_free.content_id')   
-    ->where('courses.course_url', $coursename)    
-    ->get();
-
-     // return view('coursesall');
-
-    return view('coursesall', [
-      'courses' => $course,
-      'pensums' => $pensum
-        // 'backlinks' => $backlink,
-        // 'maincategorys' => $mc_id->id,
-        // 'mmaincategorys' => $mc_id    
-
-    ]);
-  }
-
-  public function coursespensum($coursename,$pensunname)
-  {
-
-   $course = Course::select('courses.id','courses.course_url','courses.course_name','pensums.pensum_name','pensums.pensum_video','pensums.id as pensum_id','courses.course_img','courses.course_icon','courses.course_body','pensums.pensum_kwone','pensums.pensum_kwtwo','pensums.pensum_kwthree','pensums.pensum_url')
-   ->join('pensums', 'pensums.course_id', '=', 'courses.id')
-   ->join('users_califications_courses', 'users_califications_courses.course_id', '=', 'courses.id')
-    // ->join('contents as cont', 'cont.id', '=', 'posts_free.content_id')   
-   ->where('courses.course_url', $coursename)
-   ->where('pensums.pensum_url', $pensunname)        
-   ->firstOrFail();
-
-   $pensum = Course::select('courses.id','courses.course_url','courses.course_name','pensums.pensum_name','pensums.pensum_url','pensums.pensum_video','pensums.id as pensum_id','courses.course_img','courses.course_icon','courses.course_body')
-   ->join('pensums', 'pensums.course_id', '=', 'courses.id')
-   ->join('users_califications_courses', 'users_califications_courses.course_id', '=', 'courses.id')
-    // ->join('contents as cont', 'cont.id', '=', 'posts_free.content_id')   
-   ->where('courses.course_url', $coursename)    
-   ->get();
-
-   return view('cursospensum', [
-    'courses' => $course,
-    'pensums' => $pensum
-        // 'backlinks' => $backlink,
-        // 'maincategorys' => $mc_id->id,
-        // 'mmaincategorys' => $mc_id    
-
-  ]);
-
- }
-
-    /**
-     * Display the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function show($id)
-    {
-     return response()->json($id);
-   }
-
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function update(Request $request, $id)
-    {
-        //
-    }
-
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function destroy($id)
-    {
-        //
-    }
-  }
+}
