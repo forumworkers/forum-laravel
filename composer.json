@@ -1,6 +1,6 @@
 {
     "$schema": "https://getcomposer.org/schema.json",
-    "name": "joncastdev/forum-laravel",
+    "name": "forumworkers/forum-laravel",
     "type": "project",
     "description": "Open source Laravel Forum.",
     "keywords": ["forum", "forum-site"],
@@ -12,10 +12,9 @@
         }
     ],
     "support": {
-        "issues": "https://github.com/sistemaspymesjc/foroworkers/issues",
-        "forum": "https://foroworkers.sistemaspymesjc.online",
-        "wiki": "https://github.com/sistemaspymesjc/foroworkers/wiki",
-        "source": "https://github.com/sistemaspymesjc/foroworkers"
+        "issues": "https://github.com/forumworkers/forum-laravel/issues",     
+        "wiki": "https://github.com/forumworkers/foroworkers/wiki",
+        "source": "https://github.com/forumworkers/forum-laravel"
     },
      "require": {
         "php": "^8.3",

@@ -326,8 +326,8 @@ return new class extends Migration
 
         $maincategory = new MainCategory;
         $maincategory->maincategory_icon = 'fa-solid fa-code';
-        $maincategory->maincategory_name = 'Laravel';
-        $maincategory->maincategory_url = 'laravel';
+        $maincategory->maincategory_name = 'Issuesphp';
+        $maincategory->maincategory_url = 'issuesphp';
         $maincategory->subcategory_id = 3;
         $maincategory->save();
     }
