@@ -3,14 +3,14 @@
 Laravel open source forum to manage online communities.
 
 ## About
-A powerful Open Source Business Forum that can be installed on your server.Open source Laravel Forum, check [Wiki](https://github.com/forumworkers/forum-laravel/wiki)
+A powerful Open Source Business Forum that can be installed on your server.Open source Laravel Forum, manual is available at [blog/docs](https://forumworkers.blogspot.com/p/docs.html)
 
 - Follow the creator Jonathan Castro:
-    - YouTube: **[youtube.com/@joncastdev](https://youtube.com/@joncastdev)** — Videos every week
-    - Twitch: **[twitch.tv/joncastdev](https://twitch.tv/joncastdev)** — Live coding on Mondays, Wednesdays, and Fridays at 9PM UTC
-    - LinkedIn: **[linkedin.com/in/joncastdev](https://www.linkedin.com/in/joncastdev)**
-    - Instagram: **[instagram.com/joncastdev](https://www.instagram.com/joncastdev)**
-    - Tiktok: **[tiktok.com/@joncastdev](https://www.tiktok.com/@joncastdev)**
+- YouTube: **[youtube.com/@joncastdev](https://youtube.com/@joncastdev)** — Videos every week
+- Twitch: **[twitch.tv/joncastdev](https://twitch.tv/joncastdev)** — Live coding on Mondays, Wednesdays, and Fridays at 9PM UTC
+- LinkedIn: **[linkedin.com/in/joncastdev](https://www.linkedin.com/in/joncastdev)**
+- Instagram: **[instagram.com/joncastdev](https://www.instagram.com/joncastdev)**
+- Tiktok: **[tiktok.com/@joncastdev](https://www.tiktok.com/@joncastdev)**
 
 ## Starting
 
@@ -33,61 +33,29 @@ sudo apt-get install php8.3 php8.3-pgsql php8.3-mysql php8.3-intl php8.3-json ph
 
 The following steps are meant to be used on a development server.
 
+- Composer
+
+- Composer
+
+```bash
+$ composer create-project forumworkers/forum-laravel nameapp
+```
+
 -  Clone Project
 
 ```bash
 $ git clone https://github.com/joncastdev/forum-laravel.git
 ``` 
 
-- Pull Project Dev Branch
-
-```bash
-$ git pull dev
-``` 
-- Navigate to the root of the Laravel project
-
-```bash
-$ cd forum-laravel
-``` 
-- Setup vendor libraries 
-
 ```bash
 $ composer install
 ```
-
-- Copy .env.example config and generate Key project 
-
-```bash
-$ cp .env.example .env
-``` 
-```bash
-$ php artisan migrate:fresh --seed
-```
-```bash
-$ php artisan storage:link
-```
-
-```bash
-$ php artisan key:generate
-``` 
 
 - Run server
 
 ```bash
 $ php artisan serve
 ```
-
-
-## Access:
-
-_Admin: admin@gmail.com
-_Pass: Test1234
-
-_User: free@gmail.com
-_Pass: Test1234
-
-_User: vip@gmail.com
-_Pass: Test1234
 
 ## Technologies 🛠️
 
